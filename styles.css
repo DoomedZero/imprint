@@ -21,9 +21,17 @@
 }
 
 body {
-    background-color: var(--page-background);
+    background-color: var(--desk-background);
     color: var(--ink-main);
-    text-align: center;
+}
+
+.newspaper {
+    width: 1100px;
+    max-width: calc(100% - 48px);
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 24px 32px;
+    background-color: var(--page-background);
 }
 
 header {
