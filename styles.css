@@ -3,12 +3,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Gloock&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 
+
 :root {
     --font-header: "Gloock", serif;
+
     --page-background: #F2EBDD;
-    --ink-main: #302715;
-    --ink-sub: #6C675E;
-    --ruler: #B7AD9B;
+    --ink-main: #211A10;
+    --ink-sub: #574D3E;
+    --ruler: #A69A85;
+    --desk-background: #D8D0C0;
 }
 
 * {
@@ -23,11 +26,11 @@ body {
     text-align: center;
 }
 
-header{
+header {
     border-bottom: 2px solid var(--ruler);
 }
 
-p{
+p {
     font-size: 1.5rem;
     padding: 0.25rem 0;
 }
@@ -44,7 +47,7 @@ h1 {
     max-width: 100%;
     margin: 2rem auto;
     overflow: hidden;
-    background-color: var(--page-background); /* The tint color you want */
+    background-color: var(--page-background);
 }
 
 .print-photo img {
