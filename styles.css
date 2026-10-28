@@ -1,9 +1,56 @@
-*{
+/* Fonts */
+/* Gloock */
+@import url('https://fonts.googleapis.com/css2?family=Gloock&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+:root {
+    --font-header: "Gloock", serif;
+    --page-background: #F2EBDD;
+    --ink-main: #302715;
+    --ink-sub: #6C675E;
+    --ruler: #B7AD9B;
+}
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-h1{
+body {
+    background-color: var(--page-background);
+    color: var(--ink-main);
     text-align: center;
+}
+
+header{
+    border-bottom: 2px solid var(--ruler);
+}
+
+p{
+    font-size: 1.5rem;
+    padding: 0.25rem 0;
+}
+
+h1 {
+    font-family: var(--font-header);
+    letter-spacing: 2px;
+    font-size: 4rem;
+}
+
+.print-photo {
+    position: relative;
+    width: 200px;
+    max-width: 100%;
+    margin: 2rem auto;
+    overflow: hidden;
+    background-color: var(--page-background); /* The tint color you want */
+}
+
+.print-photo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    filter: grayscale(100%) contrast(1.5);
+    mix-blend-mode: multiply;
 }
