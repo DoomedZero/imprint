@@ -1,7 +1,6 @@
 /* Fonts */
 /* Gloock */
 @import url('https://fonts.googleapis.com/css2?family=Gloock&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-
 *,
 *::before,
 *::after {
@@ -11,7 +10,7 @@
 }
 
 :root {
-    --font-header: "Gloock", serif;
+    --font-brand: "Gloock", serif;
     --font-body: "Inter", sans-serif;
 
     --page-background: #F2EBDD;
@@ -24,18 +23,6 @@
 body {
     background-color: var(--desk-background);
     color: var(--ink-main);
-    font-family: var(--font-body);
-}
-
-h1 {
-    font-family: var(--font-header);
-    letter-spacing: 2px;
-}
-
-h2,
-h3,
-p,
-.imprint-nav {
     font-family: var(--font-body);
 }
 
@@ -59,6 +46,7 @@ p,
     font-size: clamp(3rem, 7vw, 5.5rem);
     line-height: 1;
     letter-spacing: 0.04em;
+    font-family: var(--font-brand);
     color: var(--ink-main);
 }
 
@@ -148,12 +136,6 @@ p,
     background-color: var(--page-background);
 }
 
-.print-photo {
-    width: 100%;
-    max-width: 520px;
-    margin: 0 0 16px;
-}
-
 .print-photo img {
     display: block;
     width: 100%;
@@ -163,106 +145,141 @@ p,
 }
 
 
+/* Overview section */
+
 .overview {
-    padding: 48px 8px;
-}
-
-.section-heading {
-    max-width: 760px;
-    margin-bottom: 40px;
-}
-
-.section-number,
-.image-caption {
-    font-family: var(--font-body);
-    font-size: 0.72rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--ink-sub);
-}
-
-.section-heading h2 {
-    margin: 16px 0;
-    /* change: different serif? */
-    font-family: var(--font-header);
-    font-size: clamp(2rem, 4vw, 3.5rem);
-    line-height: 1.08;
-    font-weight: 700;
-    /* letter-spacing: -0.04em; */
+    padding: 36px 0 24px;
     color: var(--ink-main);
 }
 
-.section-intro {
-    max-width: 600px;
-    font-size: 1.05rem;
-    line-height: 1.7;
-    color: var(--ink-sub);
-}
+/* Main feature + timeline */
 
 .overview-grid {
     display: grid;
-    grid-template-columns: minmax(0, 1.7fr) minmax(220px, 0.8fr);
+    grid-template-columns: minmax(0, 1.7fr) minmax(240px, 0.8fr);
     gap: 48px;
     align-items: start;
-    border-top: 1px solid var(--ruler);
-    padding-top: 24px;
+    padding: 28px 0 36px;
 }
 
-.overview-feature .print-photo {
+/* Lead article */
+
+.overview-feature h2 {
+    max-width: 720px;
     margin: 0 0 16px;
+    font-size: clamp(2.2rem, 4vw, 3.7rem);
+    font-weight: bold;
+    line-height: 1.08;
+    letter-spacing: -0.025em;
 }
 
-.image-caption {
-    margin-bottom: 16px;
-    font-size: 0.65rem;
-}
-
-.overview-feature h3 {
-    margin-bottom: 12px;
-    font-family: var(--font-header);
-    font-size: 1.6rem;
-    line-height: 1.2;
-    color: var(--ink-main);
-}
-
-.overview-feature > p:last-child {
-    max-width: 620px;
-    line-height: 1.8;
+.feature-deck {
+    max-width: 660px;
+    margin: 0 0 24px;
+    font-family: "Inter", sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.65;
     color: var(--ink-sub);
 }
 
-.overview-timeline {
-    border-left: 1px solid var(--ruler);
-    padding-left: 24px;
+/* Reuse the existing image filter */
+
+.overview-feature .print-photo {
+    width: 100%;
+    max-width: 520px;
+    margin: 0 0 12px;
 }
 
-.overview-timeline > h3 {
-    margin-bottom: 20px;
-    font-family: "Inter", sans-serif;
-    font-size: 0.8rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
+.overview-feature .print-photo img {
+    display: block;
+    width: 100%;
+    height: auto;
 }
+
+.image-caption {
+    margin: 0 0 24px;
+    font-family: "Inter", sans-serif;
+    font-size: 0.65rem;
+    line-height: 1.5;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink-sub);
+}
+
+/* Article body */
+
+.feature-copy {
+    max-width: 660px;
+}
+
+.feature-copy p {
+    margin: 0 0 16px;
+    font-family: "Inter", sans-serif;
+    font-size: 0.94rem;
+    line-height: 1.85;
+    color: var(--ink-main);
+}
+
+/* Timeline column */
+
+.overview-timeline {
+    padding-left: 24px;
+    border-left: 1px solid var(--ruler);
+}
+
+/* Individual milestones */
 
 .timeline-entry {
-    padding: 0 0 24px;
-    margin-bottom: 24px;
-    border-bottom: 1px solid var(--ruler);
+    position: relative;
+    padding: 0 0 20px 16px;
+    margin: 0;
+}
+
+.timeline-entry + .timeline-entry {
+    padding-top: 18px;
+}
+
+/* Small marker on the timeline rule */
+
+.timeline-entry::before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: -29px;
+    width: 8px;
+    height: 8px;
+    border: 1px solid var(--ink-main);
+    border-radius: 50%;
+    background: var(--page-background);
+}
+
+.timeline-entry + .timeline-entry::before {
+    top: 22px;
 }
 
 .timeline-date {
-    font-size: 0.75rem;
+    font-family: "Inter", sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.06em;
     color: var(--ink-sub);
 }
 
 .timeline-entry h4 {
     margin: 6px 0;
-    font-size: 1rem;
-    color: var(--ink-main);
+    font-family: "Inter", sans-serif;
+    font-size: 0.92rem;
+    font-weight: 650;
+    line-height: 1.4;
 }
 
 .timeline-entry p {
-    font-size: 0.875rem;
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    font-size: 0.78rem;
     line-height: 1.6;
     color: var(--ink-sub);
+}
+
+#last-entry{
+        border-bottom: 0;
 }
