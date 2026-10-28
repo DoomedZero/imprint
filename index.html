@@ -10,14 +10,17 @@
 
 <body>
     <main class="newspaper">
-        <header>
-            <h1 id="brand-name">
-                IMPRINT
-            </h1>
-            <p id="tag-line">
-                A Broad View On The Impact
-            </p>
+
+        <header class="masthead">
+            <h1 id="brand-name">IMPRINT</h1>
+            <p id="tag-line">A Broad View On The Impact</p>
+
+            <div class="masthead-dateline">
+                <span>Tuesday</span>
+                <time datetime="1982-09-14">14 September 1982</time>
+            </div>
         </header>
+
 
         <nav class="imprint-nav" aria-label="Newspaper sections">
             <a href="#overview" class="nav-link active">
@@ -42,9 +45,66 @@
             </a>
         </nav>
 
-        <div class="print-photo">
-            <img src="src/img/images.jpeg" alt="A historical calculating machine">
-        </div>
+
+        <section class="overview" id="overview">
+            <div class="section-heading">
+                <span class="section-number">01 / OVERVIEW</span>
+                <h2>The Ideas That Changed Our World</h2>
+                <p class="section-intro">
+                    A look at the inventions, discoveries, and people
+                    that transformed how humanity lives, thinks, and connects.
+                </p>
+            </div>
+
+            <div class="overview-grid">
+                <article class="overview-feature">
+                    <div class="print-photo">
+                        <img src="src/img/Addizionatrice_Dalton.jpg" alt="A historical calculating machine">
+                    </div>
+
+                    <p class="image-caption">
+                        FIG. 01 — THE AGE OF MECHANICAL CALCULATION
+                    </p>
+
+                    <h3>Every invention begins with a question.</h3>
+
+                    <p>
+                        From simple tools to machines capable of complex
+                        calculations, human progress has always been driven
+                        by the urge to solve problems in new ways.
+                    </p>
+                </article>
+
+                <aside class="overview-timeline">
+                    <h3>A Brief Timeline</h3>
+
+                    <div class="timeline-entry">
+                        <span class="timeline-date">c. 1450</span>
+                        <h4>The Printing Press</h4>
+                        <p>Ideas begin reaching wider audiences.</p>
+                    </div>
+
+                    <div class="timeline-entry">
+                        <span class="timeline-date">1760s</span>
+                        <h4>Industrial Revolution</h4>
+                        <p>Machines reshape work and production.</p>
+                    </div>
+
+                    <div class="timeline-entry">
+                        <span class="timeline-date">1830s</span>
+                        <h4>Mechanical Computing</h4>
+                        <p>New ideas emerge for automating calculation.</p>
+                    </div>
+
+                    <div class="timeline-entry">
+                        <span class="timeline-date">Late 1900s</span>
+                        <h4>The Wireless Age</h4>
+                        <p>Communication begins crossing distances without wires.</p>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
     </main>
 </body>
 
