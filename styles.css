@@ -1,12 +1,17 @@
 /* Fonts */
 /* Gloock */
 @import url('https://fonts.googleapis.com/css2?family=Gloock&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
 }
 
 :root {
@@ -24,6 +29,14 @@ body {
     background-color: var(--desk-background);
     color: var(--ink-main);
     font-family: var(--font-body);
+}
+
+/* Reusable Components */
+
+.ext-link {
+    color: var(--ink-main);
+    font-weight: 600;
+    border-bottom: 2px dotted var(--ink-sub);
 }
 
 .newspaper {
@@ -52,7 +65,6 @@ body {
 
 #tag-line {
     margin: 10px 0 24px;
-    font-family: var(--font-body);
     font-size: 0.85rem;
     color: var(--ink-sub);
 }
@@ -62,7 +74,6 @@ body {
     justify-content: space-between;
     align-items: center;
     padding-top: 10px;
-    font-family: var(--font-body);
     font-size: 0.72rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
@@ -94,11 +105,9 @@ body {
     padding-bottom: 4px;
 
     color: var(--ink-sub);
-    font-family: var(--font-body);
     font-size: 0.78rem;
     font-weight: 500;
     letter-spacing: 0.06em;
-    text-decoration: none;
     text-transform: uppercase;
     white-space: nowrap;
 
@@ -176,7 +185,6 @@ body {
 .feature-deck {
     max-width: 660px;
     margin: 0 0 24px;
-    font-family: "Inter", sans-serif;
     font-size: 1.05rem;
     line-height: 1.65;
     color: var(--ink-sub);
@@ -198,7 +206,6 @@ body {
 
 .image-caption {
     margin: 0 0 24px;
-    font-family: "Inter", sans-serif;
     font-size: 0.65rem;
     line-height: 1.5;
     letter-spacing: 0.06em;
@@ -214,7 +221,6 @@ body {
 
 .feature-copy p {
     margin: 0 0 16px;
-    font-family: "Inter", sans-serif;
     font-size: 0.94rem;
     line-height: 1.85;
     color: var(--ink-main);
@@ -235,7 +241,7 @@ body {
     margin: 0;
 }
 
-.timeline-entry + .timeline-entry {
+.timeline-entry+.timeline-entry {
     padding-top: 18px;
 }
 
@@ -253,12 +259,11 @@ body {
     background: var(--page-background);
 }
 
-.timeline-entry + .timeline-entry::before {
+.timeline-entry+.timeline-entry::before {
     top: 22px;
 }
 
 .timeline-date {
-    font-family: "Inter", sans-serif;
     font-size: 0.65rem;
     letter-spacing: 0.06em;
     color: var(--ink-sub);
@@ -266,7 +271,6 @@ body {
 
 .timeline-entry h4 {
     margin: 6px 0;
-    font-family: "Inter", sans-serif;
     font-size: 0.92rem;
     font-weight: 650;
     line-height: 1.4;
@@ -274,12 +278,11 @@ body {
 
 .timeline-entry p {
     margin: 0;
-    font-family: "Inter", sans-serif;
     font-size: 0.78rem;
     line-height: 1.6;
     color: var(--ink-sub);
 }
 
-#last-entry{
-        border-bottom: 0;
+#last-entry {
+    border-bottom: 0;
 }
