@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IMPRINT</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="src/css/styles.css">
 </head>
 
 <body>
@@ -13,41 +13,13 @@
         <div class="print-photo" id="rack">
             <img src="src/img/rack2 (Edited).png" alt="">
         </div>
-        <div class="print-photo" id="tv">
-            <img src="src/img/tv.avif" alt="">
-        </div>
         <div class="print-photo" id="gramophone">
             <img src="src/img/gramophone (Edited).jpg" alt="">
         </div>
     </main>
 
-    <dialog class="dialog-box" id="dialog">
-        Hello world
-        <button id="closeDialog">Close</button>
-    </dialog>
 
-    <script>
-        const triggerImg = document.getElementById('rack');
-        const myDialog = document.getElementById('dialog');
-        const closeDialog = document.getElementById('closeDialog');
-
-        // Open dialog when image is clicked
-        triggerImg.addEventListener('click', () => {
-            myDialog.showModal(); // Opens the dialog natively in the top layer
-        });
-
-        // Close dialog when the button is clicked
-        closeDialog.addEventListener('click', () => {
-            myDialog.close();
-        });
-
-        // Optional: Close dialog if user clicks outside of it (on the backdrop)
-        myDialog.addEventListener('click', (e) => {
-            if (e.target === myDialog) {
-                myDialog.close();
-            }
-        });
-    </script>
+    <script type="module" src="src/js/render.js"></script>
 </body>
 
 </html>

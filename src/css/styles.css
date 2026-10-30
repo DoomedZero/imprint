@@ -1,0 +1,47 @@
+/* Fonts */
+/* Gloock */
+@import url('https://fonts.googleapis.com/css2?family=Gloock&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Inter";
+}
+
+main{
+    display: flex;
+}
+
+.print-photo {
+    position: relative;
+    width: 100%;
+    margin: 2rem auto;
+    overflow: hidden;
+}
+
+.print-photo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    filter: grayscale(80%) contrast(1.25);
+}
+
+#rack{
+    max-width: 300px;
+    filter: grayscale(0%);
+}
+
+#rack img{
+    filter: grayscale(40%);
+}
+
+#gramophone{
+    max-width: 400px;
+    margin-top: 250px;
+}
