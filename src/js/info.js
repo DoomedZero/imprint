@@ -35,5 +35,18 @@ export const infoData = {
 
             `Babbage was never able to complete construction of any of his machines due to conflicts with his chief engineer and inadequate funding.[7][8] Nonetheless, it is one of his most successful achievements. It was not until 1941 that Konrad Zuse built the first general-purpose computer, Z3, more than a century after Babbage had proposed the pioneering analytical engine.[3]`
         ]
+    },
+    enigma: {
+        image: "src/img/enigma.png",
+
+        longData: [
+            `The Enigma machine is a cipher device developed and used in the early- to mid-20th century to protect commercial, diplomatic, and military communication. It was employed extensively by Nazi Germany during World War II, in all branches of the German military. The Enigma machine was considered so secure that it was used to encipher the most top-secret messages.[1]`,
+
+            `The Enigma has an electromechanical rotor mechanism that scrambles the 26 letters of the Latin alphabet. In typical use, one person enters text on the Enigma's keyboard and another person writes down which of the 26 lights above the keyboard illuminated at each key press. If plaintext is entered, the illuminated letters are the ciphertext. Entering ciphertext transforms it back into readable plaintext. The rotor mechanism changes the electrical connections between the keys and the lights with each keypress. In essence, the rotor's motion means every letter is encrypted with a different cryptographic key, making it highly resistant to conventional cryptographic attacks based on patterns the keys leave in the resulting ciphertext.`,
+
+            `For the system to be bidirectional, the receiving station would have to know and use the exact settings employed by the transmitting station to decrypt a message. This consisted of a series of initial settings that were generally changed daily, based on secret key lists distributed in advance. Due to the large number of messages transmitted every day, this could allow the system to be attacked if enough messages were intercepted. To complicate this, operators would choose some other (ideally) random settings of the rotors, say "GTZ", and then use the day settings to encode that key and send it. They would then change the rotors to those chosen settings and send the rest of the message. That meant that only those three letters were set to the day code, although normally typed twice for a total of six characters. This made it seemingly impossible to gather enough cyphertext to attack it.`,
+
+            `Despite the seeming difficulty in decrypting its messages, Enigma contained a number of design issues that left patterns in the cyphertext. Poland first cracked the machine as early as December 1932 and was able to read messages prior to and into the war. Poland's sharing of their achievements enabled the Allies to exploit Enigma-enciphered messages as a major source of intelligence.[2] Although Nazi Germany introduced a series of improvements to the Enigma over the years that hampered decryption efforts, cryptanalysis of the Enigma continued throughout the war. Many commentators say the flow of Ultra communications intelligence from the decrypting of Enigma, Lorenz, and other ciphers shortened the war substantially and may even have altered its outcome.[3]`
+        ]
     }
 };
