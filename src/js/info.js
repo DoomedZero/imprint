@@ -20,7 +20,20 @@ export const infoData = {
         longData: [
             `A vacuum tube, vac tube, electron tube, thermionic valve (British usage), or tube (North America) is a device that controls electric current flow in a high vacuum between electrodes to which an electric potential difference has been applied. It takes the form of an evacuated tubular envelope of glass or sometimes metal containing electrodes connected to external connection pins.`,
 
-            `The type known as a thermionic tube or thermionic valve utilizes thermionic emission of electrons from a hot cathode for fundamental electronic functions such as signal amplification and current rectification. Non-thermionic types such as vacuum phototubes achieve electron emission through the photoelectric effect, and are used for such purposes as the detection of light and measurement of its intensity. In both types the electrons are accelerated from the cathode to the anode by the electric field in the tube.`
+            `The type known as a thermionic tube or thermionic valve utilizes thermionic emission of electrons from a hot cathode for fundamental electronic functions such as signal amplification and current rectification. Non-thermionic types such as vacuum phototubes achieve electron emission through the photoelectric effect, and are used for such purposes as the detection of light and measurement of its intensity. In both types the electrons are accelerated from the cathode to the anode by the electric field in the tube.`,
+
+            `The first, and simplest, vacuum tube, the diode or Fleming valve, was invented in 1904 by John Ambrose Fleming. It contains only a heated electron-emitting cathode and an anode. Conventional current can flow in only one direction through the device: from the cathode to the anode (hence the name "valve", like a device permitting one-way flow of water). Adding one or more control grids within the tube, creating the triode, tetrode, etc., allows the current between the cathode and anode to be controlled by the voltage on the grids, creating devices able to amplify as well as rectify electric signals. Multiple grids (e.g., a heptode) allow signals applied to different electrodes to be mixed.`
+        ]
+    },
+    "analytical-engine": {
+        image: "src/img/aenge.png",
+
+        longData: [
+            `The analytical engine was a proposed digital mechanical general-purpose computer designed by the English mathematician and computer pioneer Charles Babbage.[2][3] It was first described in 1837 as the successor to Babbage's difference engine, which was a design for a simpler mechanical calculator.[4]`,
+
+            `The analytical engine incorporated an arithmetic logic unit (ALU), control flow in the form of conditional branching and loops, and integrated memory, making it the first design for a general-purpose computer that could be described in modern terms as Turing-complete.[5][6] In other words, the structure of the analytical engine was essentially the same as that which has dominated computer design in the electronic era.[3]`,
+
+            `Babbage was never able to complete construction of any of his machines due to conflicts with his chief engineer and inadequate funding.[7][8] Nonetheless, it is one of his most successful achievements. It was not until 1941 that Konrad Zuse built the first general-purpose computer, Z3, more than a century after Babbage had proposed the pioneering analytical engine.[3]`
         ]
     }
 };
