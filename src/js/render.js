@@ -7,21 +7,15 @@ const dialogueText = document.getElementById("dialogue-text");
 const dialogueChoices = document.getElementById("dialogue-choices");
 const closeButton = document.getElementById("close-dialogue");
 
-// Track which items have already shown their introduction.
 const visitedItems = new Set();
 
-let activeItem = null;
-
-// Open an item and decide whether to show its introduction.
 function openItem(item) {
     const dialogue = dialogues[item];
 
     if (!dialogue) return;
 
-    activeItem = item;
-
     dialogueTitle.textContent =
-        item === "rack" ? "Newspaper Rack" : "Gramophone";
+        item === "door" ? "The Door" : item;
 
     dialogueBox.classList.remove("hidden");
 
@@ -33,19 +27,20 @@ function openItem(item) {
     }
 }
 
-// Display introduction lines one at a time.
 function showIntroduction(item, lines, index) {
+    dialogueText.textContent = lines[index];
     dialogueChoices.replaceChildren();
 
-    dialogueText.textContent = lines[index];
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "dialogue-choice";
 
-    const nextButton = document.createElement("button");
-    nextButton.type = "button";
-    nextButton.className = "dialogue-choice";
-    nextButton.textContent =
-        index < lines.length - 1 ? "Continue..." : "Continue to choices...";
+    button.textContent =
+        index < lines.length - 1
+            ? "Continue..."
+            : "Continue to choices...";
 
-    nextButton.addEventListener("click", () => {
+    button.addEventListener("click", () => {
         if (index < lines.length - 1) {
             showIntroduction(item, lines, index + 1);
         } else {
@@ -53,10 +48,9 @@ function showIntroduction(item, lines, index) {
         }
     });
 
-    dialogueChoices.appendChild(nextButton);
+    dialogueChoices.appendChild(button);
 }
 
-// Display the item's choices.
 function showChoices(item) {
     const dialogue = dialogues[item];
 
@@ -68,31 +62,57 @@ function showChoices(item) {
 
         button.type = "button";
         button.className = "dialogue-choice";
-        button.textContent = choice.label;
+
+        // Support either a single label or multiple lines.
+        button.textContent = Array.isArray(choice.label)
+            ? choice.label.join(" ")
+            : choice.label;
 
         button.addEventListener("click", () => {
-            handleAction(choice.action);
+            if (choice.action === "sequence") {
+                showSequence(
+                    choice.lines,
+                    0,
+                    choice.nextAction
+                );
+            } else {
+                handleAction(choice.action);
+            }
         });
 
         dialogueChoices.appendChild(button);
     });
 }
 
-// Handle the selected choice.
+
+function showSequence(lines, index, nextAction) {
+    dialogueText.textContent = lines[index];
+    dialogueChoices.replaceChildren();
+
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "dialogue-choice";
+
+    button.textContent =
+        index < lines.length - 1
+            ? "Continue..."
+            : "Continue...";
+
+    button.addEventListener("click", () => {
+        if (index < lines.length - 1) {
+            showSequence(lines, index + 1, nextAction);
+        } else {
+            handleAction(nextAction);
+        }
+    });
+
+    dialogueChoices.appendChild(button);
+}
+
 function handleAction(action) {
     switch (action) {
-        case "openCollection":
-            closeDialogue();
-
-            // Connect your newspaper collection behavior here.
-            console.log("Open newspaper collection");
-            break;
-
-        case "playGramophone":
-            closeDialogue();
-
-            // Connect your gramophone behavior here.
-            console.log("Release gramophone brake");
+        case "openDoor":
+            window.location.href = "archive.html";
             break;
 
         case "close":
@@ -104,21 +124,19 @@ function handleAction(action) {
     }
 }
 
-// Close the dialogue without resetting visitedItems.
+
 function closeDialogue() {
     dialogueBox.classList.add("hidden");
     dialogueChoices.replaceChildren();
-    activeItem = null;
 }
 
-// Connect the clickable objects using their existing HTML IDs.
 document.querySelectorAll(".print-photo").forEach((element) => {
     element.addEventListener("click", () => {
         openItem(element.id);
     });
 });
 
-closeButton.addEventListener("click", closeDialogue);
+closeButton?.addEventListener("click", closeDialogue);
 
 document.addEventListener("keydown", (event) => {
     if (event.key === "Escape") {
