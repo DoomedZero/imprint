@@ -59,5 +59,24 @@ export const infoData = {
 
             `Punched cards had a significant cultural impact in the 20th century. Their legacy persists in modern computing, influencing the 80-character line standard still present in some command-line interfaces and programming environments.`
         ]
+    },
+    "mechanical-calculator": {
+        image: "src/img/Addizionatrice_Dalton.png",
+
+        longData: [
+            `A mechanical calculator, or calculating machine, is a mechanical device used to perform the basic operations of arithmetic automatically, or a simulation like an analog computer or a slide rule. Most mechanical calculators were comparable in size to small desktop computers and have been rendered obsolete by the advent of the electronic calculator and the digital computer.`,
+
+            `In 1642, Blaise Pascal invented the first operational mechanical calculator[1] with better tens-carry.[2] Concerned about his father's exhausting work as tax collector in Rouen, Pascal designed the Pascaline to help with the large amount of tedious arithmetic required.[3]`,
+
+            `In 1672, Gottfried Leibniz started designing an entirely new machine called the Stepped Reckoner. It used a stepped drum, built by and named after him, the Leibniz wheel, was the first two-motion design, the first to use cursors (creating a memory of the first operand) and the first to have a movable carriage. Leibniz built two Stepped Reckoners, one in 1694 and one in 1706.[4] The Leibniz wheel was used in many calculating machines for 200 years, and into the 1970s with the Curta hand calculator, until the advent of the electronic calculator in the mid-1970s. Leibniz was also the first to promote the idea of a pinwheel calculator.[5]`,
+
+            `During the 18th century, several inventors in Europe were working on mechanical calculators for all four species. Philipp Matthäus Hahn, Johann Helfreich Müller and others constructed machines that worked flawlessly, but due to the enormous amount of manual work and high precision needed for these machines they remained singletons and stayed mostly in cabinets of curiosity of their respective rulers. Only Müller's 1783 machine was put to use tabulating lumber prices; it later came into possession of the landgrave in Darmstadt.`,
+
+            `Thomas' arithmometer, the first commercially successful machine, was manufactured in 1851; it was the first mechanical calculator strong enough and reliable enough to be used daily in an office environment. For forty years the arithmometer was the only type of mechanical calculator available for sale until the industrial production of the more successful Odhner Arithmometer in 1890.[6]`,
+
+            `The comptometer, introduced in 1887, was the first machine to use a keyboard that consisted of columns of nine keys (from 1 to 9) for each digit. The Dalton adding machine, manufactured in 1902, was the first to have a 10 key keyboard.[7] Electric motors were used on some mechanical calculators from 1901.[8] In 1961, a comptometer type machine, the Anita Mk VII from Sumlock, became the first desktop mechanical calculator to receive an all-electronic calculator engine, creating the link in between these two industries and marking the beginning of its decline. The production of mechanical calculators came to a stop in the middle of the 1970s closing an industry that had lasted for 120 years.`,
+
+            `Charles Babbage designed two kinds of mechanical calculators, which were too sophisticated to be built in his lifetime, and the dimensions of which required a steam engine to power them. The first was an automatic mechanical calculator, his difference engine, which could automatically compute and print mathematical tables. In 1855, Georg Scheutz became the first of a handful of designers to succeed at building a smaller and simpler model of his difference engine.[9] The second one was a programmable mechanical calculator, his analytical engine, which Babbage started to design in 1834; "in less than two years he had sketched out many of the salient features of the modern computer. A crucial step was the adoption of a punched card system derived from the Jacquard loom"[10] making it infinitely programmable.[11] In 1937, Howard Aiken convinced IBM to design and build the ASCC/Mark I, the first machine of its kind, based on the architecture of the analytical engine;[12] when the machine was finished some hailed it as "Babbage's dream come true".[13]`
+        ]
     }
 };
