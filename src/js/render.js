@@ -133,6 +133,10 @@ function handleAction(action) {
             loadScene("src/scenes/archive.html");
             break;
 
+        case "inspectPot":
+            loadScene("src/scenes/two-doors.html");
+            break;
+
         case "close":
             closeDialogue();
             break;
