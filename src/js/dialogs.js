@@ -50,5 +50,59 @@ export const dialogues = {
                 nextAction: "inspectPot"
             }
         ]
+    },
+    leftDoor: {
+        firstVisit: [
+            "You see a familliar door",
+            "But your broad gaze suggests",
+            "This is not the only one",
+            `You wonder where this "left door" may lead`
+        ],
+        prompt: "What would you like to do?",
+
+        choices: [
+            {
+                label : "Open the left door...",
+                action: "openLeftDoor"
+            },
+            {
+                label: "Get insulted Again...",
+                action: "sequence",
+                lines: [
+                    "I like your curiosity...",
+                    "You will be rewarded with INFORMATION",
+                    "...This is a dream...",
+                    "...The dream of the creator..."
+                ],
+                nextAction: "openLeftDoor"
+            }
+        ]
+    },
+    rightDoor: {
+        firstVisit: [
+            "You see a familliar door",
+            "But your broad gaze suggests",
+            "This is not the only one",
+            "and you feel you should check out the left door first"
+            `You wonder where this "right door" may lead`
+        ],
+        prompt: "What would you like to do?",
+
+        choices: [
+            {
+                label : "Open the right door...",
+                action: "openRightDoor"
+            },
+            {
+                label: "Get insulted Again...",
+                action: "sequence",
+                lines: [
+                    "Guess what?...",
+                    "You may not get what you want everytime",
+                    "So just open the door..."
+                ],
+                nextAction: "openRightDoor"
+            }
+        ]
     }
 };
