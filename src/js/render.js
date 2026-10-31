@@ -32,8 +32,14 @@ function openItem(item) {
 
     if (!dialogue) return;
 
-    dialogueTitle.textContent =
-        item === "door" ? "The Door" : item;
+    const titles = {
+        door: "The Door",
+        pot: "The Pot",
+        "left-door": "The Left Door",
+        "right-door": "The Right Door"
+    };
+
+    dialogueTitle.textContent = titles[item] || item;
 
     dialogueBox.classList.remove("hidden");
 
