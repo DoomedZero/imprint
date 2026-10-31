@@ -1,5 +1,6 @@
 1. Make a space, plain white- Done
-2. door- done
+2. entrance door- done
 3. archive- done
-4. Each label is a difrnt story- done
-5. TV?
+5. navigation pot - done
+6. naviagtion doors - done
+7. atchive stories - working
