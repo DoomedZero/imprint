@@ -24,5 +24,31 @@ export const dialogues = {
                 nextAction: "openDoor"
             }
         ]
+    },
+    pot: {
+        firstVisit: [
+            "You see a pot,",
+            "Rather old and Antique,",
+            "You wonder why it is here..."
+        ],
+
+        prompt: "What would you like to do?",
+
+        choices: [
+            {
+                label: "Inspect the pot...",
+                action: "inspectPot"
+            },
+            {
+                label: "Let the pot be in peace",
+                action: "sequence",
+                lines: [
+                    "You fell for it again?",
+                    "Pitty.",
+                    "You don't have choices...",
+                ],
+                nextAction: "inspectPot"
+            }
+        ]
     }
 };
