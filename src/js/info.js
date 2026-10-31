@@ -48,5 +48,16 @@ export const infoData = {
 
             `Despite the seeming difficulty in decrypting its messages, Enigma contained a number of design issues that left patterns in the cyphertext. Poland first cracked the machine as early as December 1932 and was able to read messages prior to and into the war. Poland's sharing of their achievements enabled the Allies to exploit Enigma-enciphered messages as a major source of intelligence.[2] Although Nazi Germany introduced a series of improvements to the Enigma over the years that hampered decryption efforts, cryptanalysis of the Enigma continued throughout the war. Many commentators say the flow of Ultra communications intelligence from the decrypting of Enigma, Lorenz, and other ciphers shortened the war substantially and may even have altered its outcome.[3]`
         ]
+    },
+    "punch-cards": {
+        image: "src/img/punchcards.png",
+
+        longData: [
+            `A punched card (also punch card[1]) is a stiff paper-based medium used to store digital information via the presence or absence of holes in predefined positions. Developed over the 19th to 20th centuries, punched cards were widely used for data processing, the control of automated machines, and computing. Early applications included controlling weaving looms and recording census data.`,
+
+            `Punched cards were widely used in the 20th century, where unit record machines, organized into data processing systems, used punched cards for data input, data output, and data storage.[2][3] The IBM 12-row/80-column punched card format came to dominate the industry. Many early digital computers used punched cards as the primary medium for input of both computer programs and data. Punched cards were used for decades before being replaced by magnetic-tape data storage.`,
+
+            `Punched cards had a significant cultural impact in the 20th century. Their legacy persists in modern computing, influencing the 80-character line standard still present in some command-line interfaces and programming environments.`
+        ]
     }
 };
