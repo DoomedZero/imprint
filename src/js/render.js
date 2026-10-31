@@ -7,11 +7,24 @@ const dialogueText = document.getElementById("dialogue-text");
 const dialogueChoices = document.getElementById("dialogue-choices");
 const closeButton = document.getElementById("close-dialogue");
 
+const scenes = {
+    door: "src/scenes/door.html",
+    archive: "src/scenes/archive.html",
+    "two-doors": "src/scenes/two-doors.html"
+};
+
 const visitedItems = new Set();
 
 const app = document.getElementById("app");
 
-async function loadScene(path) {
+async function loadScene(sceneName) {
+    const path = scenes[sceneName];
+
+    if (!path) {
+        console.warn(`Unknown scene: ${sceneName}`);
+        return;
+    }
+
     try {
         const response = await fetch(path);
 
@@ -136,23 +149,19 @@ function showSequence(lines, index, nextAction) {
 function handleAction(action) {
     switch (action) {
         case "openDoor":
-            loadScene("src/scenes/archive.html");
+            loadScene("archive");
             break;
 
         case "inspectPot":
-            loadScene("src/scenes/two-doors.html");
+            loadScene("two-doors");
             break;
 
         case "openLeftDoor":
-            loadScene("../index.html");
+            loadScene("door");
             break;
 
         case "openRightDoor":
-            loadScene("src/scenes/archive.html");
-            break;
-
-        case "close":
-            closeDialogue();
+            loadScene("archive");
             break;
 
         default:
@@ -181,3 +190,5 @@ document.addEventListener("keydown", (event) => {
         closeDialogue();
     }
 });
+
+loadScene("door");
