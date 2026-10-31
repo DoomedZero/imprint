@@ -23,7 +23,7 @@ main {
 .print-photo {
     position: absolute;
     width: auto;
-    margin-top: 130px;
+    margin-top: 100px;
     overflow: visible;
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
@@ -56,7 +56,7 @@ main {
     padding: 20px;
     border-radius: 8px;
 
-    background: #f4f0e7;
+    background: #F2F0EF;
 }
 
 .dialogue-header {
@@ -65,7 +65,7 @@ main {
     align-items: center;
     gap: 16px;
     padding-bottom: 10px;
-    border-bottom: 1px solid #c9c1b2;
+    border-bottom: 1px solid lightgray;
 }
 
 #dialogue-title {
@@ -96,7 +96,7 @@ main {
 
     border: none;
     border-radius: 8px;
-    background: #e7e0d3;
+    background: lightgray;
     font: inherit;
     cursor: pointer;
     transition: background 150ms ease;
@@ -104,6 +104,6 @@ main {
 
 .dialogue-choice:hover,
 .dialogue-choice:focus-visible {
-    background: #e7e0d3;
-    outline: 1px solid #777064;
+    background: lightgray;
+    outline: 1px solid gray;
 }
