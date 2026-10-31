@@ -1,5 +1,6 @@
 
 import { dialogues } from "./dialogs.js";
+import { infoData } from "./info.js";
 
 const dialogueBox = document.getElementById("dialogue");
 const dialogueTitle = document.getElementById("dialogue-title");
@@ -180,20 +181,40 @@ function closeDialogue() {
     dialogueChoices.replaceChildren();
 }
 
-app.addEventListener("click", (event) => {
+function renderInfo(itemId) {
+    const data = infoData[itemId];
+
+    if (!data) {
+        console.warn(`No information found for: ${itemId}`);
+        return;
+    }
+
+    const image = document.getElementById("info-image");
+    const description = document.querySelector(".info-desc");
+
+    image.src = data.image;
+    image.alt = itemId;
+
+    description.replaceChildren();
+
+    data.longData.forEach((text) => {
+        const paragraph = document.createElement("p");
+        paragraph.textContent = text;
+        description.appendChild(paragraph);
+    });
+}
+
+app.addEventListener("click", async (event) => {
     const archiveItem = event.target.closest(".archive-item");
 
     if (archiveItem && app.contains(archiveItem)) {
         event.preventDefault();
 
         const item = archiveItem.querySelector("[id]");
+        if (!item) return;
 
-        if (item?.id === "eniac") {
-            loadScene("info");
-            return;
-        }
-
-        // Handle other archive items here as you add them.
+        await loadScene("info");
+        renderInfo(item.id);
         return;
     }
 

@@ -67,3 +67,12 @@ body {
     max-width: 700px;
     line-height: 1.8;
 }
+
+.info-desc p {
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+.info-desc p:last-child {
+    margin-bottom: 0;
+}
