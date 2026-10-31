@@ -19,8 +19,7 @@ export const dialogues = {
                 lines: [
                     "Nice try, but you can't.",
                     "You are in a special dimension.",
-                    "Your choices are already made.",
-                    "Now get ready..."
+                    "Your choices are already made..."
                 ],
                 nextAction: "openDoor"
             }
