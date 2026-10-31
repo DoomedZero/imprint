@@ -10,7 +10,8 @@ const closeButton = document.getElementById("close-dialogue");
 const scenes = {
     door: "src/scenes/door.html",
     archive: "src/scenes/archive.html",
-    "two-doors": "src/scenes/two-doors.html"
+    "two-doors": "src/scenes/two-doors.html",
+    info: "src/scenes/info.html"
 };
 
 const visitedItems = new Set();
@@ -164,6 +165,10 @@ function handleAction(action) {
             loadScene("archive");
             break;
 
+        case "close":
+            closeDialogue();
+            break;
+
         default:
             console.warn(`Unknown dialogue action: ${action}`);
     }
@@ -176,6 +181,22 @@ function closeDialogue() {
 }
 
 app.addEventListener("click", (event) => {
+    const archiveItem = event.target.closest(".archive-item");
+
+    if (archiveItem && app.contains(archiveItem)) {
+        event.preventDefault();
+
+        const item = archiveItem.querySelector("[id]");
+
+        if (item?.id === "eniac") {
+            loadScene("info");
+            return;
+        }
+
+        // Handle other archive items here as you add them.
+        return;
+    }
+
     const item = event.target.closest(".print-photo");
 
     if (!item || !app.contains(item)) return;
