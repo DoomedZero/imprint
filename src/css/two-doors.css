@@ -1,0 +1,15 @@
+.two-doors-scene {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(40px, 12vw, 160px);
+    padding: 40px;
+}
+
+.two-doors-scene .print-photo {
+    position: relative;
+    width: clamp(100px, 18vw, 220px);
+    margin-top: 0;
+    flex: 0 1 auto;
+}

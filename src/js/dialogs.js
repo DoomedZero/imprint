@@ -51,12 +51,12 @@ export const dialogues = {
             }
         ]
     },
-    leftDoor: {
+    "left-door": {
         firstVisit: [
             "You see a familliar door",
             "But your broad gaze suggests",
             "This is not the only one",
-            `You wonder where this "left door" may lead`
+            'You wonder where this "left door" may lead'
         ],
         prompt: "What would you like to do?",
 
@@ -78,13 +78,13 @@ export const dialogues = {
             }
         ]
     },
-    rightDoor: {
+    "right-door": {
         firstVisit: [
             "You see a familliar door",
             "But your broad gaze suggests",
             "This is not the only one",
-            "and you feel you should check out the left door first"
-            `You wonder where this "right door" may lead`
+            "and you feel you should check out the left door first",
+            'You wonder where this "right door" may lead'
         ],
         prompt: "What would you like to do?",
 
