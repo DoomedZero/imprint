@@ -143,6 +143,14 @@ function handleAction(action) {
             loadScene("src/scenes/two-doors.html");
             break;
 
+        case "openLeftDoor":
+            loadScene("../index.html");
+            break;
+
+        case "openRightDoor":
+            loadScene("src/scenes/archive.html");
+            break;
+
         case "close":
             closeDialogue();
             break;
