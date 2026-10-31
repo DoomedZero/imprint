@@ -9,6 +9,24 @@ const closeButton = document.getElementById("close-dialogue");
 
 const visitedItems = new Set();
 
+const app = document.getElementById("app");
+
+async function loadScene(path) {
+    try {
+        const response = await fetch(path);
+
+        if (!response.ok) {
+            throw new Error(`Could not load scene: ${response.status}`);
+        }
+
+        const sceneHTML = await response.text();
+        app.innerHTML = sceneHTML;
+        closeDialogue();
+    } catch (error) {
+        console.error("Scene transition failed:", error);
+    }
+}
+
 function openItem(item) {
     const dialogue = dialogues[item];
 
@@ -112,7 +130,7 @@ function showSequence(lines, index, nextAction) {
 function handleAction(action) {
     switch (action) {
         case "openDoor":
-            window.location.href = "archive.html";
+            loadScene("src/scenes/archive.html");
             break;
 
         case "close":
@@ -130,10 +148,12 @@ function closeDialogue() {
     dialogueChoices.replaceChildren();
 }
 
-document.querySelectorAll(".print-photo").forEach((element) => {
-    element.addEventListener("click", () => {
-        openItem(element.id);
-    });
+app.addEventListener("click", (event) => {
+    const item = event.target.closest(".print-photo");
+
+    if (!item || !app.contains(item)) return;
+
+    openItem(item.id);
 });
 
 closeButton?.addEventListener("click", closeDialogue);
