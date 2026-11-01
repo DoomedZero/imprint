@@ -5,7 +5,7 @@
 6. naviagtion doors - done
 7. archive stories - done
 7.5. Review data- done
-8. transitions
+8. transitions- done
 9. lift??
 10. TV??
 11. Gramophone- to stop music or change it??
