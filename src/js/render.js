@@ -12,7 +12,8 @@ const scenes = {
     door: "src/scenes/door.html",
     archive: "src/scenes/archive.html",
     "two-doors": "src/scenes/two-doors.html",
-    info: "src/scenes/info.html"
+    info: "src/scenes/info.html",
+    lift: "src/scenes/lift.html"
 };
 
 const visitedItems = new Set();

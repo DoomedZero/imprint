@@ -122,3 +122,8 @@ main {
         transition-duration: 0.01ms;
     }
 }
+
+#lift{
+    width: 80%;
+    max-width: 300px;
+}
