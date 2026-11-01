@@ -8,11 +8,12 @@
 5. Archive item's info
 6. Transitions
 7. Clock
+8. Scene visit Counter
+9. Choice change based on counter
+
 
 //Backyard:
 
-
-8. Counter
 9. lift-done
 10. TV- Done (make it info center- in progress  and maybe in v2)
 11. Gramophone- (appearance in progress You cant stop music)- DONE
