@@ -15,7 +15,8 @@ const scenes = {
     info: "src/scenes/info.html",
     lift: "src/scenes/lift.html",
     clock: "src/scenes/clock.html",
-    tv: "src/scenes/tv.html"
+    tv: "src/scenes/tv.html",
+    gramophone: "src/scenes/gramophone.html"
 };
 
 const visitedItems = new Set();
@@ -247,4 +248,4 @@ document.addEventListener("keydown", (event) => {
     }
 });
 
-loadScene("tv");
+loadScene("gramophone");
