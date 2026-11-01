@@ -3,9 +3,7 @@ export const dialogues = {
     door: {
         firstVisit: [
             "You see a door,",
-            "The door seems old but sturdy enough to",
-            "be in same shape at same space",
-            "But still you wonder where it may lead.",
+            "You wonder where it may lead.",
             "The door can't answer, usually...",
             "...So you have to figure out your self"
         ],
@@ -60,7 +58,9 @@ export const dialogues = {
     },
     "left-door": {
         firstVisit: [
-            "You see a familliar door",
+             "You see a door",
+            "Rather familliar and your broad gaze suggests",
+            "It is not the only one",
             'You wonder where this "left door" may lead'
         ],
         prompt: "What would you like to do?",
@@ -85,7 +85,9 @@ export const dialogues = {
     },
     "right-door": {
         firstVisit: [
-            "You see a familliar door",
+            "You see a door",
+            "Rather familliar and your broad gaze suggests",
+            "It is not the only one",
             'You wonder where this "right door" may lead'
         ],
         prompt: "What would you like to do?",
@@ -111,8 +113,6 @@ export const dialogues = {
         firstVisit: [
             "You see a clock",
             "It seems... stopped",
-            "Think about it...",
-            "The clock has stopped",
             "But who might need clock here?",
             "What does this clock even suggest?"
         ],
