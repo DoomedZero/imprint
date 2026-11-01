@@ -75,19 +75,6 @@
     line-height: 1.5;
 }
 
-.pot-area {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 100px;
-    margin-bottom: 220px;
-}
-
-#pot {
-    position: relative;
-    width: 200px;
-}
-
 @media (max-width: 760px) {
     .archive-header {
         grid-template-columns: 1fr 1fr;

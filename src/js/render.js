@@ -249,4 +249,4 @@ document.addEventListener("keydown", (event) => {
     }
 });
 
-loadScene("clock");
+loadScene("door");
