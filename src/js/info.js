@@ -14,7 +14,7 @@ export const infoData = {
             `ENIAC was formally accepted by the U.S. Army Ordnance Corps in July 1946. It was transferred to Aberdeen Proving Ground in Aberdeen, Maryland, in 1947, where it was in continuous operation until 1955.`
         ]
     },
-    "vaccum-tubes": {
+    "vacuum-tubes": {
         image: "src/img/vaccum-tube.jpeg",
 
         longData: [
