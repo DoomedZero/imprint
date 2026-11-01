@@ -44,6 +44,7 @@ async function loadScene(sceneName) {
         }
 
         app.innerHTML = await response.text();
+        window.scrollTo(0, 0);
         closeDialogue();
         return true;
 
