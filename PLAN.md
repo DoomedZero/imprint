@@ -7,7 +7,7 @@
 7.5. Review data- done
 8. transitions- done
 9. lift-done
-9.5. Randomized Destinations...
-10. TV??
-11. Gramophone- to stop music or change it??
-12. Paintings
+10. TV- Done (make it info center)
+11. Gramophone- You cant stop music- DONE
+13. Randomized Destinations...
+12. Paintings?? (ON HOLD)
