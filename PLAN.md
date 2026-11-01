@@ -6,7 +6,8 @@
 7. archive stories - done
 7.5. Review data- done
 8. transitions- done
-9. lift??
+9. lift-done
+9.5. Randomized Destinations...
 10. TV??
 11. Gramophone- to stop music or change it??
 12. Paintings
