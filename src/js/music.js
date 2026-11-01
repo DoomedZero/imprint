@@ -1,7 +1,8 @@
 const audio = document.getElementById("bgm");
 
-audio.currentTime = 1; 
-
+if (audio) {
+    audio.currentTime = 1;
+}
 async function startMusic() {
     if (!audio || !audio.paused) return;
 
@@ -12,5 +13,5 @@ async function startMusic() {
     }
 }
 
-document.addEventListener("pointerdown", startMusic, { once: true });
-document.addEventListener("keydown", startMusic, { once: true });
+document.addEventListener("pointerdown", startMusic);
+document.addEventListener("keydown", startMusic);

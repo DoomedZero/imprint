@@ -28,7 +28,7 @@ async function loadScene(sceneName) {
 
     if (!path) {
         console.warn(`Unknown scene: ${sceneName}`);
-        return;
+        return false;
     }
 
     app.classList.add("is-transitioning");
@@ -45,9 +45,11 @@ async function loadScene(sceneName) {
 
         app.innerHTML = await response.text();
         closeDialogue();
+        return true;
 
     } catch (error) {
         console.error("Scene transition failed:", error);
+        return false;
 
     } finally {
         // Allow the new scene to fade in.
@@ -148,10 +150,7 @@ function showSequence(lines, index, nextAction) {
     button.type = "button";
     button.className = "dialogue-choice";
 
-    button.textContent =
-        index < lines.length - 1
-            ? "Continue..."
-            : "Continue...";
+    button.textContent = "Continue...";
 
     button.addEventListener("click", () => {
         if (index < lines.length - 1) {
@@ -229,8 +228,11 @@ app.addEventListener("click", async (event) => {
         const item = archiveItem.querySelector("[id]");
         if (!item) return;
 
-        await loadScene("info");
-        renderInfo(item.id);
+        const loaded = await loadScene("info");
+
+        if (loaded) {
+            renderInfo(item.id);
+        }
         return;
     }
 
