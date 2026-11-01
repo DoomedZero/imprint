@@ -3,7 +3,11 @@ export const dialogues = {
     door: {
         firstVisit: [
             "You see a door,",
-            "You wonder where it may lead."
+            "The door seems old but sturdy enough to",
+            "be in same shape at same space",
+            "But still you wonder where it may lead.",
+            "The door can't answer, usually...",
+            "...So you have to figure out your self"
         ],
 
         prompt: "What would you like to do?",
@@ -29,7 +33,8 @@ export const dialogues = {
         firstVisit: [
             "You see a pot,",
             "Rather old and Antique,",
-            "You wonder why it is here..."
+            "There is nothing to gather in this odd dimension",
+            "You wonder why it is here...",
         ],
 
         prompt: "What would you like to do?",
@@ -46,6 +51,8 @@ export const dialogues = {
                     "You fell for it again?",
                     "Pitty.",
                     "You don't have choices...",
+                    "You may see two paths...",
+                    "But you will never know where you will reach next...",
                 ],
                 nextAction: "inspectPot"
             }
