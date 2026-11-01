@@ -66,7 +66,8 @@ function openItem(item) {
         door: "The Door",
         pot: "The Pot",
         "left-door": "The Left Door",
-        "right-door": "The Right Door"
+        "right-door": "The Right Door",
+        clock: "The Clock"
     };
 
     dialogueTitle.textContent = titles[item] || item;
@@ -248,4 +249,4 @@ document.addEventListener("keydown", (event) => {
     }
 });
 
-loadScene("gramophone");
+loadScene("clock");
