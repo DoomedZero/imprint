@@ -99,5 +99,15 @@ export const dialogues = {
                 nextAction: "openRightDoor"
             }
         ]
+    },
+    clock: {
+        firstVisit: [
+            "You see a clock",
+            "It seems... stopped",
+            "Think about it...",
+            "The clock has stopped",
+            "But who might need clock here?",
+            "What does this clock even suggest?"
+        ]
     }
 };
