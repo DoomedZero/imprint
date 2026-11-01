@@ -15,7 +15,7 @@ export const infoData = {
         ]
     },
     "vacuum-tubes": {
-        image: "src/img/vaccum-tube.jpeg",
+        image: "src/img/vacuum-tube.jpeg",
 
         longData: [
             `A vacuum tube, vac tube, electron tube, thermionic valve (British usage), or tube (North America) is a device that controls electric current flow in a high vacuum between electrodes to which an electric potential difference has been applied. It takes the form of an evacuated tubular envelope of glass or sometimes metal containing electrodes connected to external connection pins.`,
