@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');@import url('https://fonts.googleapis.com/css2?family=Gloock&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 *,
 *::before,
@@ -121,9 +121,26 @@ main {
     }
 }
 
+
+/* POT */
+
+.pot-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    margin-bottom: 220px;
+}
+
+#pot {
+    position: relative;
+    width: 200px;
+}
+
+
 /* ID Specefic Styles */
 
-#lift{
+#lift {
     width: 80%;
     max-width: 300px;
 }
