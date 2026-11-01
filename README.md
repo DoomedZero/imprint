@@ -12,6 +12,22 @@ You just wanted to learn about the technologies that impacted human evolution, b
 - This project wasn't originally planned as a game. It evolved into one (read the Philosophy section).
 - The first two hours were spent laying the foundation for the archive and information pages. Those early components weren't discarded; they were transformed. I still use CSS class names I created at the very beginning. ;)
 
+## How to play?
+-Just open the demo link
+-Initial load may take a while
+(I am sorry for this bad structure, it will be solved)
+-It is a maze so... If you feel lost- It is intentional(This is easy mode btw, I have planned normal and hard mode already)
+-It is a mystery so... Read dialogues, it may help (actually not, in this version)
+-If it doesnt open, Just be there for a while, dont spam refresh.
+(try to load it few times or thing)
+-If you are stuck then refresh
+
+## How to play locally?
+-If deployement is not working, you can always-
+1. Clone repo, zip it, just save it in your computer somehow
+2. I assume you have vs code, if not then find a way to open index.html with a server
+(live server in vs code does the job!!)
+
 ## Features
 
 - **Interactive scenes** — Move between interconnected environments without navigating to a separate website page.
