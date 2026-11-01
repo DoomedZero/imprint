@@ -25,6 +25,24 @@ export const dialogues = {
                 ],
                 nextAction: "openDoor"
             }
+        ],
+
+        secondVisit: [
+            "ATTENTION!!",
+            "This is not your familliar door",
+            "Even though it may seem...",
+            "There is something that seems DIFFERENT..."
+        ],
+
+        secondChoices: [
+            {
+                label: "Open the door(Safe One)",
+                action: "openDoor"
+            },
+            {
+                label: "Open the door(Real One)",
+                action: "openClockScene"
+            }
         ]
     },
     pot: {

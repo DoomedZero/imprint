@@ -11,6 +11,8 @@
 
 //Backyard:
 
+
+8. Counter
 9. lift-done
 10. TV- Done (make it info center- in progress  and maybe in v2)
 11. Gramophone- (appearance in progress You cant stop music)- DONE

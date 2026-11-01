@@ -20,6 +20,7 @@ const scenes = {
 };
 
 const visitedItems = new Set();
+const sceneVisits = {};
 
 const app = document.getElementById("app");
 
@@ -34,7 +35,6 @@ async function loadScene(sceneName) {
     app.classList.add("is-transitioning");
 
     try {
-        // Wait for the fade-out to finish.
         await new Promise(resolve => setTimeout(resolve, 250));
 
         const response = await fetch(path);
@@ -44,16 +44,17 @@ async function loadScene(sceneName) {
         }
 
         app.innerHTML = await response.text();
+
+        sceneVisits[sceneName] = (sceneVisits[sceneName] || 0) + 1;
+
         window.scrollTo(0, 0);
         closeDialogue();
-        return true;
 
+        return true;
     } catch (error) {
         console.error("Scene transition failed:", error);
         return false;
-
     } finally {
-        // Allow the new scene to fade in.
         requestAnimationFrame(() => {
             app.classList.remove("is-transitioning");
         });
@@ -66,18 +67,24 @@ function openItem(item) {
     if (!dialogue) return;
 
     const titles = {
-        door: "The Door",
-        pot: "The Pot",
-        "left-door": "The Left Door",
-        "right-door": "The Right Door",
-        clock: "The Clock"
+        door: "??",
+        pot: "??",
+        "left-door": "??",
+        "right-door": "??",
+        clock: "??"
     };
 
     dialogueTitle.textContent = titles[item] || item;
-
     dialogueBox.classList.remove("hidden");
 
-    if (!visitedItems.has(item)) {
+    if (item === "door" && sceneVisits.door === 2) {
+        showIntroduction(
+            item,
+            dialogue.secondVisit,
+            0,
+            () => showChoices(item, dialogue.secondChoices)
+        );
+    } else if (!visitedItems.has(item)) {
         visitedItems.add(item);
         showIntroduction(item, dialogue.firstVisit, 0);
     } else {
@@ -85,7 +92,7 @@ function openItem(item) {
     }
 }
 
-function showIntroduction(item, lines, index) {
+function showIntroduction(item, lines, index = 0, onComplete = null) {
     dialogueText.textContent = lines[index];
     dialogueChoices.replaceChildren();
 
@@ -100,7 +107,9 @@ function showIntroduction(item, lines, index) {
 
     button.addEventListener("click", () => {
         if (index < lines.length - 1) {
-            showIntroduction(item, lines, index + 1);
+            showIntroduction(item, lines, index + 1, onComplete);
+        } else if (onComplete) {
+            onComplete();
         } else {
             showChoices(item);
         }
@@ -109,22 +118,18 @@ function showIntroduction(item, lines, index) {
     dialogueChoices.appendChild(button);
 }
 
-function showChoices(item) {
+function showChoices(item, choices = dialogues[item].choices) {
     const dialogue = dialogues[item];
 
     dialogueText.textContent = dialogue.prompt;
     dialogueChoices.replaceChildren();
 
-    dialogue.choices.forEach((choice) => {
+    choices.forEach(choice => {
         const button = document.createElement("button");
 
         button.type = "button";
         button.className = "dialogue-choice";
-
-        // Support either a single label or multiple lines.
-        button.textContent = Array.isArray(choice.label)
-            ? choice.label.join(" ")
-            : choice.label;
+        button.textContent = choice.label;
 
         button.addEventListener("click", () => {
             if (choice.action === "sequence") {
@@ -142,7 +147,6 @@ function showChoices(item) {
     });
 }
 
-
 function showSequence(lines, index, nextAction) {
     dialogueText.textContent = lines[index];
     dialogueChoices.replaceChildren();
@@ -150,7 +154,6 @@ function showSequence(lines, index, nextAction) {
     const button = document.createElement("button");
     button.type = "button";
     button.className = "dialogue-choice";
-
     button.textContent = "Continue...";
 
     button.addEventListener("click", () => {
@@ -168,6 +171,10 @@ function handleAction(action) {
     switch (action) {
         case "openDoor":
             loadScene("archive");
+            break;
+
+        case "openClockScene":
+            loadScene("clock");
             break;
 
         case "inspectPot":
@@ -191,7 +198,6 @@ function handleAction(action) {
     }
 }
 
-
 function closeDialogue() {
     dialogueBox.classList.add("hidden");
     dialogueChoices.replaceChildren();
@@ -208,19 +214,24 @@ function renderInfo(itemId) {
     const image = document.getElementById("info-image");
     const description = document.querySelector(".info-desc");
 
+    if (!image || !description) {
+        console.warn("Information page elements were not found.");
+        return;
+    }
+
     image.src = data.image;
     image.alt = itemId;
 
     description.replaceChildren();
 
-    data.longData.forEach((text) => {
+    data.longData.forEach(text => {
         const paragraph = document.createElement("p");
         paragraph.textContent = text;
         description.appendChild(paragraph);
     });
 }
 
-app.addEventListener("click", async (event) => {
+app.addEventListener("click", async event => {
     const archiveItem = event.target.closest(".archive-item");
 
     if (archiveItem && app.contains(archiveItem)) {
@@ -234,6 +245,7 @@ app.addEventListener("click", async (event) => {
         if (loaded) {
             renderInfo(item.id);
         }
+
         return;
     }
 
@@ -246,7 +258,7 @@ app.addEventListener("click", async (event) => {
 
 closeButton?.addEventListener("click", closeDialogue);
 
-document.addEventListener("keydown", (event) => {
+document.addEventListener("keydown", event => {
     if (event.key === "Escape") {
         closeDialogue();
     }
