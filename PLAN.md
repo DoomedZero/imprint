@@ -3,8 +3,8 @@
 3. archive- done
 5. navigation pot - done
 6. naviagtion doors - done
-7. archive stories - donr
-7.5. Review data
+7. archive stories - done
+7.5. Review data- done
 8. transitions
 9. lift??
 10. TV??
