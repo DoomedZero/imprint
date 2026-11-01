@@ -13,7 +13,8 @@ const scenes = {
     archive: "src/scenes/archive.html",
     "two-doors": "src/scenes/two-doors.html",
     info: "src/scenes/info.html",
-    lift: "src/scenes/lift.html"
+    lift: "src/scenes/lift.html",
+    clock: "src/scenes/clock.html"
 };
 
 const visitedItems = new Set();
@@ -245,4 +246,4 @@ document.addEventListener("keydown", (event) => {
     }
 });
 
-loadScene("door");
+loadScene("clock");
