@@ -71,13 +71,13 @@ export const dialogues = {
                 action: "openLeftDoor"
             },
             {
-                label: "Get insulted Again...",
+                label: "Walk Away...",
                 action: "sequence",
                 lines: [
-                    "I like your curiosity...",
+                    "I like your refusal capabilities...",
                     "You will be rewarded with INFORMATION",
-                    "...This is a dream...",
-                    "...The dream of the creator..."
+                    "...This is a maze.",
+                    "Where you never know what might happen next"
                 ],
                 nextAction: "openLeftDoor"
             }
@@ -96,7 +96,7 @@ export const dialogues = {
                 action: "openRightDoor"
             },
             {
-                label: "Get insulted Again...",
+                label: "Walk away...",
                 action: "sequence",
                 lines: [
                     "Guess what?...",
