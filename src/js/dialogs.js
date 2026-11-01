@@ -115,6 +115,30 @@ export const dialogues = {
             "The clock has stopped",
             "But who might need clock here?",
             "What does this clock even suggest?"
+        ],
+        prompt: "What would you like to do?",
+
+        choices: [
+            {
+                label: "Talk with the clock??...",
+                action: "sequence",
+                lines: [
+                    "Try to communicate with clock?",
+                    "Are you serious? well you can try...",
+                    "Maybe clock might know something about this place...",
+                ],
+                nextAction: "commsClock"
+            },
+            {
+                label: "Try to pick it up...",
+                action: "sequence",
+                lines: [
+                    "Picking up other's things is not good",
+                    "But that doesn't make it bad...",
+                    "Maybe clock can be helpful..."
+                ],
+                nextAction: "commsClock"
+            }
         ]
     }
 };
