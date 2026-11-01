@@ -106,3 +106,19 @@ main {
     background: lightgray;
     outline: 1px solid gray;
 }
+
+/* Transition */
+#app {
+    opacity: 1;
+    transition: opacity 250ms ease;
+}
+
+#app.is-transitioning {
+    opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #app {
+        transition-duration: 0.01ms;
+    }
+}

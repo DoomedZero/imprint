@@ -27,18 +27,29 @@ async function loadScene(sceneName) {
         return;
     }
 
+    app.classList.add("is-transitioning");
+
     try {
+        // Wait for the fade-out to finish.
+        await new Promise(resolve => setTimeout(resolve, 250));
+
         const response = await fetch(path);
 
         if (!response.ok) {
             throw new Error(`Could not load scene: ${response.status}`);
         }
 
-        const sceneHTML = await response.text();
-        app.innerHTML = sceneHTML;
+        app.innerHTML = await response.text();
         closeDialogue();
+
     } catch (error) {
         console.error("Scene transition failed:", error);
+
+    } finally {
+        // Allow the new scene to fade in.
+        requestAnimationFrame(() => {
+            app.classList.remove("is-transitioning");
+        });
     }
 }
 
