@@ -1,6 +1,6 @@
 
 //Finalized:
-
+(Terra week-2)
 1. Plain white space and a door
 2. Archive scene
 3. Navigation Pot
@@ -11,11 +11,15 @@
 8. Scene visit Counter
 9. Choice change based on counter
 
+(Terra week-2)
+
 
 //Backyard:
 
 9. lift-done
-10. TV- Done (make it info center- in progress  and maybe in v2)
-11. Gramophone- (appearance in progress You cant stop music)- DONE
-12. Randomized Destinations... (not in this version)
+10. TV- Done (make it info center- in progress)
+11. Gramophone- (in progress You cant stop music)- DONE
 13. Paintings?? (ON HOLD)
+12. Randomized Destinations... (IMP)
+14. IMP: CONVO WITH THE CLOCK
+15. Absolute shapes (Currently only the home one- square)
