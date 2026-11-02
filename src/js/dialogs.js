@@ -13,7 +13,7 @@ export const dialogues = {
         choices: [
             {
                 label: "Open the door...",
-                action: "openDoor"
+                action: "openArchiveScene"
             },
             {
                 label: "Extinguish your fire of curiosity with laziness...",
@@ -23,7 +23,7 @@ export const dialogues = {
                     "You are in a special dimension.",
                     "Your choices are already made..."
                 ],
-                nextAction: "openDoor"
+                nextAction: "openArchiveScene"
             }
         ],
 
@@ -37,7 +37,7 @@ export const dialogues = {
         secondChoices: [
             {
                 label: "Open the door(Safe One)",
-                action: "openDoor"
+                action: "openArchiveScene"
             },
             {
                 label: "Open the door(Real One)",
@@ -58,7 +58,7 @@ export const dialogues = {
         choices: [
             {
                 label: "Inspect the pot...",
-                action: "inspectPot"
+                action: "openTwoDoorsScene"
             },
             {
                 label: "Let the pot be in peace",
@@ -70,7 +70,7 @@ export const dialogues = {
                     "You may see two paths...",
                     "But you will never know where you will reach next...",
                 ],
-                nextAction: "inspectPot"
+                nextAction: "openTwoDoorsScene"
             }
         ]
     },
@@ -86,7 +86,7 @@ export const dialogues = {
         choices: [
             {
                 label : "Open the left door...",
-                action: "openLeftDoor"
+                action: "openMainDoorScene"
             },
             {
                 label: "Walk Away...",
@@ -97,7 +97,7 @@ export const dialogues = {
                     "...This is a maze.",
                     "Where you never know what might happen next"
                 ],
-                nextAction: "openLeftDoor"
+                nextAction: "openMainDoorScene"
             }
         ]
     },
@@ -113,7 +113,7 @@ export const dialogues = {
         choices: [
             {
                 label : "Open the right door...",
-                action: "openRightDoor"
+                action: "openArchiveScene"
             },
             {
                 label: "Walk away...",
@@ -123,7 +123,7 @@ export const dialogues = {
                     "You may not get what you want everytime",
                     "So just open the door..."
                 ],
-                nextAction: "openRightDoor"
+                nextAction: "openArchiveScene"
             }
         ]
     },

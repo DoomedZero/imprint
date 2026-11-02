@@ -1,65 +1,18 @@
-
 import { dialogues } from "./dialogs.js";
 import { infoData } from "./info.js";
+import { getSceneVisits } from "./state.js";
+import {
+    loadScene,
+    getCurrentScene
+} from "./navigation.js";
 
 const dialogueBox = document.getElementById("dialogue");
 const dialogueTitle = document.getElementById("dialogue-title");
 const dialogueText = document.getElementById("dialogue-text");
 const dialogueChoices = document.getElementById("dialogue-choices");
 const closeButton = document.getElementById("close-dialogue");
-
-const scenes = {
-    door: "src/scenes/door.html",
-    archive: "src/scenes/archive.html",
-    "two-doors": "src/scenes/two-doors.html",
-    info: "src/scenes/info.html",
-    lift: "src/scenes/lift.html",
-    clock: "src/scenes/clock.html",
-    tv: "src/scenes/tv.html",
-    gramophone: "src/scenes/gramophone.html"
-};
-
-const visitedItems = new Set();
-const sceneVisits = {};
-
 const app = document.getElementById("app");
 
-async function loadScene(sceneName) {
-    const path = scenes[sceneName];
-
-    if (!path) {
-        console.warn(`Unknown scene: ${sceneName}`);
-        return false;
-    }
-
-    app.classList.add("is-transitioning");
-
-    try {
-        await new Promise(resolve => setTimeout(resolve, 250));
-
-        const response = await fetch(path);
-
-        if (!response.ok) {
-            throw new Error(`Could not load scene: ${response.status}`);
-        }
-
-        app.innerHTML = await response.text();
-
-        sceneVisits[sceneName] = (sceneVisits[sceneName] || 0) + 1;
-
-        window.scrollTo(0, 0);
-        closeDialogue();
-
-        return true;
-    } catch (error) {
-        console.error("Scene transition failed:", error);
-        return false;
-    } finally {
-        requestAnimationFrame(() => {
-            app.classList.remove("is-transitioning");
-        });
-    }
-}
 
 function openItem(item) {
     const dialogue = dialogues[item];
@@ -77,20 +30,32 @@ function openItem(item) {
     dialogueTitle.textContent = titles[item] || item;
     dialogueBox.classList.remove("hidden");
 
-    if (item === "door" && sceneVisits.door === 2) {
+    if (item === "door" && getSceneVisits("door") === 2) {
         showIntroduction(
             item,
             dialogue.secondVisit,
             0,
             () => showChoices(item, dialogue.secondChoices)
         );
-    } else if (!visitedItems.has(item)) {
-        visitedItems.add(item);
+    } else if (
+        getSceneVisits(getCurrentScene()) === 1
+    ) {
         showIntroduction(item, dialogue.firstVisit, 0);
     } else {
         showChoices(item);
     }
 }
+
+async function navigateTo(sceneName) {
+    const loaded = await loadScene(sceneName);
+
+    if (loaded) {
+        closeDialogue();
+    }
+
+    return loaded;
+}
+
 
 function showIntroduction(item, lines, index = 0, onComplete = null) {
     dialogueText.textContent = lines[index];
@@ -169,24 +134,20 @@ function showSequence(lines, index, nextAction) {
 
 function handleAction(action) {
     switch (action) {
-        case "openDoor":
-            loadScene("archive");
+        case "openArchiveScene":
+            navigateTo("archive");
             break;
 
         case "openClockScene":
-            loadScene("clock");
+            navigateTo("clock");
             break;
 
-        case "inspectPot":
-            loadScene("two-doors");
+        case "openTwoDoorsScene":
+            navigateTo("two-doors");
             break;
 
-        case "openLeftDoor":
-            loadScene("door");
-            break;
-
-        case "openRightDoor":
-            loadScene("archive");
+        case "openMainDoorScene":
+            navigateTo("door");
             break;
 
         case "close":
@@ -240,7 +201,7 @@ app.addEventListener("click", async event => {
         const item = archiveItem.querySelector("[id]");
         if (!item) return;
 
-        const loaded = await loadScene("info");
+        const loaded = await navigateTo("info");;
 
         if (loaded) {
             renderInfo(item.id);
@@ -263,5 +224,3 @@ document.addEventListener("keydown", event => {
         closeDialogue();
     }
 });
-
-loadScene("door");
