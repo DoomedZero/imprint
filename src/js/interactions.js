@@ -1,13 +1,12 @@
 
 import { dialogues } from "./dialogs.js";
-import { getSceneVisits } from "./state.js";
-import {
-    loadScene,
-    getCurrentScene
-} from "./navigation.js";
+import { getSceneVisits } from "./state.js"; 
+import { loadScene } from "./navigation.js";
 import { renderInfo } from "./render.js";
 
 const app = document.getElementById("app");
+
+const completedIntroductions = new Set();
 
 const dialogueBox = document.getElementById("dialogue");
 const dialogueTitle = document.getElementById("dialogue-title");
@@ -15,9 +14,9 @@ const dialogueText = document.getElementById("dialogue-text");
 const dialogueChoices = document.getElementById("dialogue-choices");
 const closeButton = document.getElementById("close-dialogue");
 
-// --------------------
-// Scene navigation
-// --------------------
+// -----------------//
+// Scene navigation //
+// -----------------//
 
 async function navigateTo(sceneName) {
     const loaded = await loadScene(sceneName);
@@ -29,9 +28,9 @@ async function navigateTo(sceneName) {
     return loaded;
 }
 
-// --------------------
-// Dialogue interactions
-// --------------------
+// ----------------------//
+// Dialogue interactions //
+// ----------------------//
 
 function openItem(item) {
     const dialogue = dialogues[item];
@@ -49,17 +48,33 @@ function openItem(item) {
     dialogueTitle.textContent = titles[item] || item;
     dialogueBox.classList.remove("hidden");
 
-    if (item === "door" && getSceneVisits("door") === 2) {
+    // The main door's special second-visit dialogue.
+    if (
+        item === "door" &&
+        getSceneVisits("door") === 2
+    ) {
         showIntroduction(
             item,
             dialogue.secondVisit,
             0,
-            () => showChoices(item, dialogue.secondChoices)
+            () => {
+                showChoices(item, dialogue.secondChoices);
+            }
         );
-    } else if (
-        getSceneVisits(getCurrentScene()) === 1
-    ) {
-        showIntroduction(item, dialogue.firstVisit, 0);
+
+    // Show the first introduction until it has been completed.
+    } else if (!completedIntroductions.has(item)) {
+        showIntroduction(
+            item,
+            dialogue.firstVisit,
+            0,
+            () => {
+                completedIntroductions.add(item);
+                showChoices(item);
+            }
+        );
+
+    // The introduction is complete; show normal choices.
     } else {
         showChoices(item);
     }
@@ -172,9 +187,9 @@ function closeDialogue() {
     dialogueChoices.replaceChildren();
 }
 
-// --------------------
-// Player input
-// --------------------
+// -------------//
+// Player input //
+// -------------//
 
 export function initializeInteractions() {
     app.addEventListener("click", async event => {
