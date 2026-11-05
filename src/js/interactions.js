@@ -1,4 +1,3 @@
-
 import { dialogues } from "./dialogs.js";
 import { getSceneVisits } from "./state.js"; 
 import { loadScene } from "./navigation.js";
@@ -14,9 +13,6 @@ const dialogueText = document.getElementById("dialogue-text");
 const dialogueChoices = document.getElementById("dialogue-choices");
 const closeButton = document.getElementById("close-dialogue");
 
-// -----------------//
-// Scene navigation //
-// -----------------//
 
 async function navigateTo(sceneName) {
     const loaded = await loadScene(sceneName);
@@ -28,27 +24,15 @@ async function navigateTo(sceneName) {
     return loaded;
 }
 
-// ----------------------//
-// Dialogue interactions //
-// ----------------------//
 
 function openItem(item) {
     const dialogue = dialogues[item];
 
     if (!dialogue) return;
 
-    const titles = {
-        door: "??",
-        pot: "??",
-        "left-door": "??",
-        "right-door": "??",
-        clock: "??"
-    };
-
-    dialogueTitle.textContent = titles[item] || item;
+    dialogueTitle.textContent = dialogue.firstVisit.title || item;
     dialogueBox.classList.remove("hidden");
 
-    // The main door's special second-visit dialogue.
     if (
         item === "door" &&
         getSceneVisits("door") === 2
@@ -62,7 +46,6 @@ function openItem(item) {
             }
         );
 
-    // Show the first introduction until it has been completed.
     } else if (!completedIntroductions.has(item)) {
         showIntroduction(
             item,
@@ -74,7 +57,6 @@ function openItem(item) {
             }
         );
 
-    // The introduction is complete; show normal choices.
     } else {
         showChoices(item);
     }
@@ -165,8 +147,8 @@ function handleAction(action) {
             navigateTo("clock");
             break;
 
-        case "openTwoDoorsScene":
-            navigateTo("two-doors");
+        case "openLiftScene":
+            navigateTo("lift");
             break;
 
         case "openMainDoorScene":
@@ -186,10 +168,6 @@ function closeDialogue() {
     dialogueBox.classList.add("hidden");
     dialogueChoices.replaceChildren();
 }
-
-// -------------//
-// Player input //
-// -------------//
 
 export function initializeInteractions() {
     app.addEventListener("click", async event => {

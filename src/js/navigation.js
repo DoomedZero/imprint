@@ -22,7 +22,7 @@ export function getCurrentScene() {
 }
 
 export async function loadScene(sceneName) {
-    // Prevent overlapping scene transitions.
+    
     if (isLoadingScene) return false;
 
     const path = scenes[sceneName];
