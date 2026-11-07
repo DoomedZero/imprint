@@ -6,7 +6,6 @@ const app = document.getElementById("app");
 const scenes = {
     door: "src/scenes/door.html",
     archive: "src/scenes/archive.html",
-    "two-doors": "src/scenes/two-doors.html",
     info: "src/scenes/info.html",
     lift: "src/scenes/lift.html",
     clock: "src/scenes/clock.html",

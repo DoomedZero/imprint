@@ -22,7 +22,7 @@ export const dialogues = {
             choices: [
                 {
                     label: "Open the door...",
-                    action: "openArchiveScene"
+                    action: "archive"
                 },
                 {
                     label: "Extinguish your fire of curiosity with laziness...",
@@ -32,7 +32,7 @@ export const dialogues = {
                         "You are in a special dimension.",
                         "Your choices are already made..."
                     ],
-                    nextAction: "openArchiveScene"
+                    nextAction: "archive"
                 }
             ]
         },
@@ -58,11 +58,11 @@ export const dialogues = {
             choices: [
                 {
                     label: "Open the door(Safe One)",
-                    action: "openArchiveScene"
+                    action: "archive"
                 },
                 {
                     label: "Open the door(Real One)",
-                    action: "openClockScene"
+                    action: "clock"
                 }
             ]
         },
@@ -76,7 +76,7 @@ export const dialogues = {
             choices: [
                 {
                     label: "Open the door...",
-                    action: "openArchiveScene"
+                    action: "archive"
                 },
                 {
                     label: "Extinguish your fire of curiosity with laziness...",
@@ -86,7 +86,7 @@ export const dialogues = {
                         "You are in a special dimension.",
                         "Your choices are already made..."
                     ],
-                    nextAction: "openArchiveScene"
+                    nextAction: "archive"
                 }
             ]
         }
@@ -103,7 +103,6 @@ export const dialogues = {
             intro: [
                 "You see a pot,",
                 "Rather old and Antique,",
-                "There is nothing to gather in this odd dimension",
                 "You wonder why it is here...",
             ],
 
@@ -112,7 +111,7 @@ export const dialogues = {
             choices: [
                 {
                     label: "Inspect the pot...",
-                    action: "openLiftScene"
+                    action: "lift"
                 },
                 {
                     label: "Let the pot be in peace",
@@ -124,7 +123,7 @@ export const dialogues = {
                         "You may see two paths...",
                         "But you will never know where you will reach next...",
                     ],
-                    nextAction: "openLiftScene"
+                    nextAction: "lift"
                 }
             ]
         },
@@ -134,7 +133,7 @@ export const dialogues = {
             choices: [
                 {
                     label: "Inspect the pot...",
-                    action: "openLiftScene"
+                    action: "lift"
                 },
                 {
                     label: "Let the pot be in peace",
@@ -146,7 +145,7 @@ export const dialogues = {
                         "You may see two paths...",
                         "But you will never know where you will reach next...",
                     ],
-                    nextAction: "openLiftScene"
+                    nextAction: "lift"
                 }
             ]
         }
@@ -158,16 +157,23 @@ export const dialogues = {
 
             title: "??",
 
+            intro: [
+                "Oh!, A lift,",
+                "Will it work?",
+                "The lift can't answer, usually...",
+                "...So you have to figure out your self."
+            ],
+
             prompt: "What would you like to do?",
 
             choices: [
                 {
-                    label: "Open the main door...",
-                    action: "openMainDoorScene"
+                    label: "Press Main Door button in the lift",
+                    action: "door"
                 },
                 {
-                    label: "Open the archive...",
-                    action: "openArchiveScene"
+                    label: "Press The Archive button in the lift...",
+                    action: "archive"
                 }
             ]
 
@@ -187,34 +193,12 @@ export const dialogues = {
 
             intro: [
                 "You see a clock",
-                "It seems... stopped",
-                "But who might need clock here?",
-                "What does this clock even suggest?"
+                "Old and antqiue as usual",
+                "You wonder..."
             ],
             prompt: "What would you like to do?",
 
-            choices: [
-                {
-                    label: "Talk with the clock??...",
-                    action: "sequence",
-                    lines: [
-                        "Try to communicate with clock?",
-                        "Are you serious? well you can try...",
-                        "Maybe clock might know something about this place...",
-                    ],
-                    nextAction: "commsClock1"
-                },
-                {
-                    label: "Try to pick it up...",
-                    action: "sequence",
-                    lines: [
-                        "Picking up other's things is not good",
-                        "But that doesn't make it bad...",
-                        "Maybe clock can be helpful..."
-                    ],
-                    nextAction: "commsClock1"
-                }
-            ]
+            action: "commsClock1"
         },
 
         commsClock1: {
@@ -222,14 +206,11 @@ export const dialogues = {
             title: "The Clock",
 
             intro: [
-                "..................",
-                "Ahem...Oh my throat hurts..",
-                "There's been a long time since",
-                "someone came to visit me",
-                "It's just so good to see people around here",
-                "Wait, why do you look surprised?",
-                "Don't tell me that you don't know",
-                "This place is WIERD"
+                "....Ayyy wassup.....",
+                "(Ahem)...Oh my throat hurts..",
+                'Hey I am "tick-tock", Dont mistake me for "tik-tok',
+                "There's been a long time since someone came to visit me",
+                "It's so good to see people around here",
             ],
 
             prompt: "Come on, say something....",
@@ -242,20 +223,12 @@ export const dialogues = {
             title: "??",
 
             intro: [
-                "You seem confused??",
-                "I thought you were ready for this",
-                "Maybe you think, the clock doesn't seem as polite as others",
-                "but thou shall never expect everyone to be same"
+                "You seem MORE confused??",
+                "How can this old clock speak like this?"
             ],
 
-            prompt: "So now tell me, what you want do?",
+            action: "commsClock3"
 
-            choices: [
-                {
-                    label: "Introduce yourself (This is the only thing you should do)",
-                    action: "commsClock3"
-                }
-            ]
         },
 
         commsClock3: {
@@ -280,7 +253,9 @@ export const dialogues = {
                 "....Ha ha ha, how was that philosophical rant",
                 "Wait wait wait, lemme tell ya, Existance comes with basic traits",
                 "So primarily you are your point of view...."
-            ]
+            ],
+
+            action: "commsClock5"
         },
 
         commsClock5: {
@@ -291,7 +266,7 @@ export const dialogues = {
                 "You should ask about this place, NOW."
             ],
 
-            action: "commsClock5"
+            action: "commsClock6"
         },
 
         commsClock6: {
@@ -302,7 +277,9 @@ export const dialogues = {
                 "But do you know about this place?",
                 "Why it is weird? Why so plain?",
                 "Why you can talk?....."
-            ]
+            ],
+
+            action: "commsClock7"
         },
 
         commsClock7: {
@@ -317,7 +294,9 @@ export const dialogues = {
                 'and what you mean by, "why" I can talk?',
                 "Everyone can talk, you just can't hear it",
                 "Maybe you need a lesson from THE RADIO..."
-            ]
+            ],
+
+            action: "commsClock8"
         },
 
         commsClock8: {
@@ -338,7 +317,7 @@ export const dialogues = {
 
             intro: [
                 "Who is this radio? what I am supposed to learn from it?",
-                "Why the door and the pot didn't talk like you?"
+                "Why the doo    r and the pot didn't talk like you?"
             ],
 
             action: "commsClock10"
