@@ -32,3 +32,4 @@ REVIEWER SAID-
 15. Absolute shapes (Currently only the home one- square)
 
 note- pot portion is little harsh
+GRAMMAR MISTAKES AHHHHHHHHHH
