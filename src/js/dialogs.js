@@ -266,10 +266,9 @@ export const dialogues = {
 
             intro: [
                 "You see a clock",
-                "Old and antqiue as usual",
+                "yet another antique piece",
                 "You wonder..."
             ],
-            prompt: "What would you like to do?",
 
             action: "commsClock1"
         },
@@ -281,9 +280,7 @@ export const dialogues = {
             intro: [
                 "....Ayyy wassup.....",
                 "(Ahem)...Oh my throat hurts..",
-                'Hey I am "tick-tock", Dont mistake me for "tik-tok',
-                "There's been a long time since someone came to visit me",
-                "It's so good to see people around here",
+                'Hey I am "tick-tock", Dont mistake me for "tik-tok"',
             ],
 
             prompt: "Come on, say something....",
@@ -292,118 +289,5 @@ export const dialogues = {
 
         },
 
-        commsClock2: {
-            title: "??",
-
-            intro: [
-                "You seem MORE confused??",
-                "How can this old clock speak like this?"
-            ],
-
-            action: "commsClock3"
-
-        },
-
-        commsClock3: {
-            title: "?",
-
-            intro: [
-                "Hello, I am......",
-                "Wait...I dont know who I am...",
-            ],
-
-            action: "commsClock4"
-        },
-
-        commsClock4: {
-            title: "The Clock",
-
-            intro: [
-                "There we go again...",
-                "Let me tell YOU, you are not the only one, who don't know who they are...",
-                "If you remove every trait from a person, You are left with nothing to point out",
-                "So if you consider people as collection of traits- There is no you",
-                "....Ha ha ha, how was that philosophical rant",
-                "Wait wait wait, lemme tell ya, Existance comes with basic traits",
-                "So primarily you are your point of view...."
-            ],
-
-            action: "commsClock5"
-        },
-
-        commsClock5: {
-            title: "??",
-
-            intro: [
-                "The clock seems to know something...",
-                "You should ask about this place, NOW."
-            ],
-
-            action: "commsClock6"
-        },
-
-        commsClock6: {
-            title: "?",
-
-            intro: [
-                "Well, that was some cool knowledge",
-                "But do you know about this place?",
-                "Why it is weird? Why so plain?",
-                "Why you can talk?....."
-            ],
-
-            action: "commsClock7"
-        },
-
-        commsClock7: {
-            title: "The clock",
-
-            intro: [
-                "Well that's a big list of questions..",
-                "Let's go rapid fire..",
-                "This is a unique dimension where space and time are obsolete",
-                "It looks weird because, it is plain",
-                "The reason for it being plain is unknown to me too",
-                'and what you mean by, "why" I can talk?',
-                "Everyone can talk, you just can't hear it",
-                "Maybe you need a lesson from THE RADIO..."
-            ],
-
-            action: "commsClock8"
-        },
-
-        commsClock8: {
-            title: "??",
-
-            intro: [
-                "The radio? we didn't saw that",
-                "Maybe radio can be a next destination",
-                "Ask the clock, who is the radio? and what I should learn from it?",
-                "What are you wait for, ASK, POLIETLY."
-            ],
-
-            action: "commsClock9"
-        },
-
-        commsClock9: {
-            title: "?",
-
-            intro: [
-                "Who is this radio? what I am supposed to learn from it?",
-                "Why the doo    r and the pot didn't talk like you?"
-            ],
-
-            action: "commsClock10"
-        },
-
-        commsClock10: {
-            title: "??",
-
-            intro: [
-                "The radio is a radio who can teach you how to focus on frequncies",
-                "So you hear...."
-            ]
         }
-
-    }
 };
