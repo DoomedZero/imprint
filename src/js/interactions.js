@@ -13,7 +13,6 @@ const dialogueBox = document.getElementById("dialogue");
 const dialogueTitle = document.getElementById("dialogue-title");
 const dialogueText = document.getElementById("dialogue-text");
 const dialogueChoices = document.getElementById("dialogue-choices");
-const closeButton = document.getElementById("close-dialogue");
 
 const completedIntroductions = new Set();
 
@@ -192,8 +191,6 @@ function executeAction(object, action) {
 
     if (nextBlock) {
         showBlock(getCurrentScene(), object, action, nextBlock);
-    } else if (action === "close") {
-        closeDialogue();
     } else {
         navigateTo(action);
     }
@@ -221,11 +218,5 @@ export function initializeInteractions() {
         if (object && app.contains(object)) {
             openItem(object.id);
         }
-    });
-
-    closeButton?.addEventListener("click", closeDialogue);
-
-    document.addEventListener("keydown", event => {
-        if (event.key === "Escape") closeDialogue();
     });
 }
