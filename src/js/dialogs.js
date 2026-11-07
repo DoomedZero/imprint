@@ -1,3 +1,5 @@
+import { act } from "react";
+
 export const dialogues = {
     door: {
 
@@ -146,8 +148,8 @@ export const dialogues = {
                         "What a pitty.",
                         "Maybe Ignoring the truth brings happiness",
                         "But what does happiness bring?",
-                        "What about curiosity which led you know this?",
-                        "Don't be an ignorant...",
+                        "and What about curiosity which led you know this?",
+                        "Don't ignore atleast in this place..."
                     ],
 
                     action: "lift"
@@ -278,8 +280,7 @@ export const dialogues = {
                 "(Ahem)...Oh my throat hurts..",
                 'I am "tick-tock", Dont mistake me for "tik-tok"',
                 "It takes me more time to tick than you guys scroll",
-                "I saw you appear in front of me- and I as I don't sleep, I just greeted you",
-                "Don't think I am a colck, I am a representator of time",
+                "I saw you appear in front of me- and, I just greeted you",
                 "But then quesion arises- WHO ARE YOU?",
                 "And I bet no one can answer if Time itself inntrogates you.",
                 "Just think who you were before you were born and will be afer death?"
@@ -295,27 +296,23 @@ export const dialogues = {
             title: "??",
 
             intro: [
-                "The clock doesn't sleep and considers it as a representator of time",
-                "It is eager to be the first and have upperhanded in a converstation",
                 "I can say... Just accept your foolishness and say",
                 "YOU ARE RIGHT... I DON'T KNOW ABOUT ME...",
             ],
 
-            prompt: "What would... No I think this MUST be your answer but anyways",
+            prompt: "What would like to do?- Maybe this time IT IS YOUR CHOICE",
 
             choices: [
                 {
-                    label: "Just accept your foolishness",
+                    label: "Just accept your foolishness as adviced",
 
                     response: [
-                        "I think you should disobeyed me",
+                        "I think you should disobeyed the advice",
                         "...",
                         "but Now you are in a so called paradox with two choices",
-                        "If you obey one- other becomes false",
-                        "if you try to disobey, you obey my disobey advice",
-                        "and you were going to obey my advice anyway...",
+                        "if you obey, you don't disobey and if you disobey, you obey the advice to disobey",
                         "It's like either you find Superdeterminism or it finds YOU",
-                        "Your...."
+                        "Your-"
                     ],
 
                     action: "commsClock3A"
@@ -323,15 +320,19 @@ export const dialogues = {
                 },
 
                 {
-                    label: "Don't follow my advice and go on yourself",
+                    label: "Don't follow the advice and go on yourself",
 
                     response: [
                         "It takes GUTS to disobey",
                         "I like your courage but let me put you in a paradox of choice",
                         "I advice you to disobey my advice",
                         "Don't think hard...",
-                        "if you obey, you don't disobey and if you disobey, you obey the advice to disobey"
-                    ]
+                        "if you obey, you don't disobey and if you disobey, you obey the advice to disobey",
+                        "It's like either you find Superdeterminism or it finds YOU",
+                        "Your-"
+                    ],
+
+                    action: "commsClock3A"
                 }
 
 
@@ -339,7 +340,7 @@ export const dialogues = {
         },
 
         commsClock3A: {
-            title: "?",
+            title: "YOU??",
 
             intro: [
                 "/ Wait who are you?",
@@ -375,7 +376,43 @@ export const dialogues = {
                 "Seeing the play enogh times, the stage knows which are the critical choices",
                 "Whose results the actors find hard to live with...",
                 "But don't limit my existance in the sacle of a mere stage analogy",
-            ]
+            ],
+
+            action: "commsClock3D"
+        },
+
+        commsClock3D: {
+            title: "You",
+
+            intro: [
+                "So I am stuck in a worse place then I imagined...",
+                "and you claim to be familliar or might know something about it",
+                "So-"
+            ],
+
+            action: "commsClock4"
+        },
+
+        commsClock4: {
+            title: "The clock",
+
+            intro: [
+                "No need to answer my question",
+                "I have met many and only some managed to utter a word and got proven wrong instantly",
+                "I liked that you tried...",
+                "You may wonder what this place is and why are you here",
+                "I sugget you meeting with my friend TV.",
+                "But he is hard to reach, ",
+                "so you will need to meet my another friend The radio before meeting Tv",
+                "Maybe Radio can tell you more...",
+                "But keep one thing in mind don't force anybody about anything here",
+                "Because everyone is not same...",
+                "So lets end the conversation with a clue to reach the raio and the clue is",
+                "THE ARCHIVE CONTAINS SOME VALUEABLE INFORMATION MAKE SURE YOU READ EVERYTHING",
+                "Your return ticket to the main door is ready- Bye!!"
+            ],
+
+            action: "door"
         }
 
     }
