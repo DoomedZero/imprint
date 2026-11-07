@@ -23,3 +23,5 @@
 12. Randomized Destinations... (IMP)
 14. IMP: CONVO WITH THE CLOCK
 15. Absolute shapes (Currently only the home one- square)
+
+note- pot portion is little harsh
