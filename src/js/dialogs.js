@@ -150,8 +150,8 @@ export const dialogues = {
                         "But what does happiness bring?",
                         "What about curiosity which led you know this?",
                         "Do you really think we take birth just to die",
-                        "Don't be a sadistic",
-                        "Even after your choices and thought doesn't change ANYTHING..."
+                        "Don't be an ignorant...", 
+                        "Even after when your choices don't matter..."
                     ],
 
                     action: "lift"
@@ -163,21 +163,19 @@ export const dialogues = {
 
             choices: [
                 {
-                    label: "Inspect the pot...",
+                    label: "Inspect the pot yourself...",
 
                     response: [],
 
                     action: "lift"
                 },
                 {
-                    label: "Let the pot be in peace",
+                    label: "Let the pot inspect you...",
 
                     response: [
-                        "You fell for it again?",
-                        "Pitty.",
-                        "You don't have choices...",
-                        "You may see two paths...",
-                        "But you will never know where you will reach next...",
+                        "You may have thought you will get another ramble",
+                        "Guess you will not",
+                        "Sometimes things don't go as you wish...",
                     ],
 
                     action: "lift"
