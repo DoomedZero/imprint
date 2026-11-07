@@ -175,33 +175,68 @@ export const dialogues = {
 
     lift: {
 
-        fallback: {
+        firstVisit: {
 
             title: "??",
 
+            trigger: {
+                type: "sceneVisit",
+                count: 1
+            },
+
             intro: [
-                "Oh!, A lift,",
-                "Will it work?",
-                "The lift can't answer, usually...",
-                "...So you have to figure out your self."
+                "Oh! a Ascending Room!,",
+                "But with no operator",
+                "Can you use it?"
             ],
 
             prompt: "What would you like to do?",
 
             choices: [
                 {
-                    label: "Press Main Door button in the lift",
+                    label: "Try to operate the lift...",
+
+                    response: [],
+
+                    action: "archive"
+                },
+                {
+                    label: "Give up...",
+
+                    response: [
+                        "Giving up is a personal choice",
+                        "But there are no personal choices here.",
+                        "Your choices are already made...",
+                        "If you don't come out of comfort zone you see yourself where you started",
+                        "You may have NOT guessed it, but you are going back to the start...",
+                        "As per the rules...Obviously"
+                    ],
+
+                    action: "door"
+                }
+            ]
+        },
+
+        fallback: {
+
+            title: "??",
+
+            prompt: "What would you like to do?",
+
+            choices: [
+                {
+                    label: "Press The Archive button in the lift",
+
+                    response: [],
+
+                    action: "archive"
+                },
+                {
+                    label: "Press The Main Door button in the lift...",
 
                     response: [],
 
                     action: "door"
-                },
-                {
-                    label: "Press The Archive button in the lift...",
-
-                    response: [],
-                    
-                    action: "archive"
                 }
             ]
 
