@@ -63,7 +63,7 @@ export const dialogues = {
 
                     response: [
                         "So you choose to push",
-                        "Well tell me if pushing and pulling opens the door",
+                        "Well if pushing and pulling opens the door",
                         "Do we really need both options?",
                         "Maybe yes",
                         "Maybe YES FOR SURE!!"
@@ -76,7 +76,7 @@ export const dialogues = {
 
                     response: [
                         "So you choose to pull",
-                        "Well tell me if pushing and pulling opens the door",
+                        "Well if pulling and pushing opens the door",
                         "Do we really need both options?",
                         "Maybe yes",
                         "Maybe YES FOR SURE!!"
@@ -106,8 +106,6 @@ export const dialogues = {
 
                     response: [
                         "Nice try, but you can't.",
-                        "You are in a special dimension.",
-                        "Your choices are already made..."
                     ],
 
                     action: "archive"
@@ -137,21 +135,19 @@ export const dialogues = {
                     label: "Inspect the pot...",
 
                     response: [],
-                    
+
                     action: "lift"
                 },
                 {
                     label: "Ignore it...",
 
                     response: [
-                        '"Ignorance is bliss"- You say',
+                        '"Ignorance is bliss"-',
                         "What a pitty.",
                         "Maybe Ignoring the truth brings happiness",
                         "But what does happiness bring?",
                         "What about curiosity which led you know this?",
-                        "Do you really think we take birth just to die",
-                        "Don't be an ignorant...", 
-                        "Even after when your choices don't matter..."
+                        "Don't be an ignorant...",
                     ],
 
                     action: "lift"
@@ -278,16 +274,109 @@ export const dialogues = {
             title: "The Clock",
 
             intro: [
-                "....Ayyy wassup.....",
+                "/ Hey visitor",
                 "(Ahem)...Oh my throat hurts..",
-                'Hey I am "tick-tock", Dont mistake me for "tik-tok"',
+                'I am "tick-tock", Dont mistake me for "tik-tok"',
+                "It takes me more time to tick than you guys scroll",
+                "I saw you appear in front of me- and I as I don't sleep, I just greeted you",
+                "Don't think I am a colck, I am a representator of time",
+                "But then quesion arises- WHO ARE YOU?",
+                "And I bet no one can answer if Time itself inntrogates you.",
+                "Just think who you were before you were born and will be afer death?"
             ],
 
-            prompt: "Come on, say something....",
+            prompt: "Do you have any clue about it?",
 
             action: "commsClock2"
 
         },
 
+        commsClock2: {
+            title: "??",
+
+            intro: [
+                "The clock doesn't sleep and considers it as a representator of time",
+                "It is eager to be the first and have upperhanded in a converstation",
+                "I can say... Just accept your foolishness and say",
+                "YOU ARE RIGHT... I DON'T KNOW ABOUT ME...",
+            ],
+
+            prompt: "What would... No I think this MUST be your answer but anyways",
+
+            choices: [
+                {
+                    label: "Just accept your foolishness",
+
+                    response: [
+                        "I think you should disobeyed me",
+                        "...",
+                        "but Now you are in a so called paradox with two choices",
+                        "If you obey one- other becomes false",
+                        "if you try to disobey, you obey my disobey advice",
+                        "and you were going to obey my advice anyway...",
+                        "It's like either you find Superdeterminism or it finds YOU",
+                        "Your...."
+                    ],
+
+                    action: "commsClock3A"
+
+                },
+
+                {
+                    label: "Don't follow my advice and go on yourself",
+
+                    response: [
+                        "It takes GUTS to disobey",
+                        "I like your courage but let me put you in a paradox of choice",
+                        "I advice you to disobey my advice",
+                        "Don't think hard...",
+                        "if you obey, you don't disobey and if you disobey, you obey the advice to disobey"
+                    ]
+                }
+
+
+            ]
+        },
+
+        commsClock3A: {
+            title: "?",
+
+            intro: [
+                "/ Wait who are you?",
+                "And why your tone suddenly got changed",
+                "Rambling about philosophies and paradoxes,",
+                "Confusing me... Just who are you?"
+            ],
+
+            action: "commsClock3B"
+        },
+
+        commsClock3B: {
+            title: "??",
+
+            intro: [
+                "I am...SYSTEM 3"
+            ],
+
+            action: "commsClock3C"
+        },
+
+        commsClock3C: {
+            title: "System 3",
+
+            intro: [
+                "SYSTEM 1 drives usual daily choices",
+                "SYSTEM 2  is for rational thinking and,",
+                "You might think then Who AM I?...",
+                "Maybe I can say I DON'T KNOW WHO AM I TOO...",
+                "But I Do know who I am...",
+                "Think of me as a stage- The actor changes, teh roles changes, the audience changes",
+                "But the stage doesn't, and why I am CHANGED you say...",
+                "Seeing the play enogh times, the stage knows which are the critical choices",
+                "Whose results the actors find hard to live with...",
+                "But don't limit my existance in the sacle of a mere stage analogy",
+            ]
         }
+
+    }
 };
