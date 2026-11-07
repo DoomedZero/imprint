@@ -1,4 +1,11 @@
 
+OMFG WEEK 2 APPRVOED-
+REVIEWER SAID-
+1. detailed README.md for players
+2. faster loading and loading screen
+3. more scenes (3(2) done!- tv, radio and replaced two doors into lift)
+
+
 //Finalized:
 (Terra week-2)
 1. Plain white space and a door
