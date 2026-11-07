@@ -21,9 +21,7 @@ export const dialogues = {
 
             choices: [
                 {
-                    label: [
-                        "Open the door..."
-                    ],
+                    label: "Open the door...",
 
                     response: [],
 
@@ -64,10 +62,16 @@ export const dialogues = {
             choices: [
                 {
                     label: "Open the door(Safe One)",
+
+                    response: [],
+
                     action: "archive"
                 },
                 {
                     label: "Open the door(Real One)",
+
+                    response: [],
+
                     action: "clock"
                 }
             ]
@@ -82,17 +86,21 @@ export const dialogues = {
             choices: [
                 {
                     label: "Open the door...",
+
+                    response: [],
+
                     action: "archive"
                 },
                 {
                     label: "Extinguish your fire of curiosity with laziness...",
-                    action: "sequence",
-                    lines: [
+
+                    response: [
                         "Nice try, but you can't.",
                         "You are in a special dimension.",
                         "Your choices are already made..."
                     ],
-                    nextAction: "archive"
+
+                    action: "archive"
                 }
             ]
         }
@@ -117,19 +125,23 @@ export const dialogues = {
             choices: [
                 {
                     label: "Inspect the pot...",
+
+                    response: [],
+                    
                     action: "lift"
                 },
                 {
                     label: "Let the pot be in peace",
-                    action: "sequence",
-                    lines: [
+
+                    response: [
                         "You fell for it again?",
                         "Pitty.",
                         "You don't have choices...",
                         "You may see two paths...",
                         "But you will never know where you will reach next...",
                     ],
-                    nextAction: "lift"
+
+                    action: "lift"
                 }
             ]
         },
@@ -139,19 +151,23 @@ export const dialogues = {
             choices: [
                 {
                     label: "Inspect the pot...",
+
+                    response: [],
+
                     action: "lift"
                 },
                 {
                     label: "Let the pot be in peace",
-                    action: "sequence",
-                    lines: [
+
+                    response: [
                         "You fell for it again?",
                         "Pitty.",
                         "You don't have choices...",
                         "You may see two paths...",
                         "But you will never know where you will reach next...",
                     ],
-                    nextAction: "lift"
+
+                    action: "lift"
                 }
             ]
         }
@@ -175,10 +191,16 @@ export const dialogues = {
             choices: [
                 {
                     label: "Press Main Door button in the lift",
+
+                    response: [],
+
                     action: "door"
                 },
                 {
                     label: "Press The Archive button in the lift...",
+
+                    response: [],
+                    
                     action: "archive"
                 }
             ]
