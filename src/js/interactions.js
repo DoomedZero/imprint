@@ -1,3 +1,4 @@
+
 import { dialogues } from "./dialogs.js";
 import {
     getSceneVisits,
@@ -49,7 +50,7 @@ function triggerMatches(trigger, scene, object) {
 }
 
 
-// Dialogue data is object-based: dialogues.door, dialogues.pot, dialogues.clock...
+
 function selectDialogue(scene, object) {
     const objectDialogues = dialogues[object];
 
@@ -73,6 +74,7 @@ function selectDialogue(scene, object) {
 }
 
 
+
 function openItem(object) {
     const scene = getCurrentScene();
 
@@ -89,38 +91,49 @@ function openItem(object) {
 }
 
 
+
 function showBlock(scene, object, key, block) {
     dialogueTitle.textContent = block.title || object;
 
-    if (block.intro?.length) {
-        showIntroduction(scene, object, key, block, 0);
-        return;
-    }
-
-    finishBlock(scene, object, key, block);
+    showLines(block.intro, () => {
+        finishBlock(scene, object, key, block);
+    });
 }
 
 
-function showIntroduction(scene, object, key, block, index) {
-    dialogueText.textContent = block.intro[index];
-    dialogueChoices.replaceChildren();
 
-    addButton(
-        index < block.intro.length - 1 ? "Continue..." : "Continue...",
-        () => {
-            if (index < block.intro.length - 1) {
-                showIntroduction(scene, object, key, block, index + 1);
+function showLines(lines, onComplete) {
+    if (!lines?.length) {
+        onComplete();
+        return;
+    }
+
+    let index = 0;
+
+    function renderLine() {
+        dialogueText.textContent = lines[index];
+        dialogueChoices.replaceChildren();
+
+        addButton("Continue...", () => {
+            index++;
+
+            if (index < lines.length) {
+                renderLine();
             } else {
-                finishBlock(scene, object, key, block);
+                onComplete();
             }
-        }
-    );
+        });
+    }
+
+    renderLine();
 }
 
 
 function finishBlock(scene, object, key, block) {
     if (block.trigger) {
-        completedIntroductions.add(completionKey(scene, object, key));
+        completedIntroductions.add(
+            completionKey(scene, object, key)
+        );
     }
 
     if (block.choices) {
@@ -129,7 +142,10 @@ function finishBlock(scene, object, key, block) {
         if (block.prompt) {
             dialogueText.textContent = block.prompt;
             dialogueChoices.replaceChildren();
-            addButton("Continue...", () => executeAction(object, block.action));
+
+            addButton("Continue...", () => {
+                executeAction(object, block.action);
+            });
         } else {
             executeAction(object, block.action);
         }
@@ -140,52 +156,35 @@ function finishBlock(scene, object, key, block) {
 }
 
 
+
 function showChoices(object, block) {
     dialogueText.textContent = block.prompt || "";
     dialogueChoices.replaceChildren();
 
     for (const choice of block.choices) {
         addButton(choice.label, () => {
-            if (choice.action === "sequence") {
-                showSequence(object, choice.lines || [], 0, choice.nextAction);
-            } else {
+            showLines(choice.response, () => {
                 executeAction(object, choice.action);
-            }
+            });
         });
     }
 }
 
 
-function showSequence(object, lines, index, nextAction) {
-    if (!lines.length) {
-        executeAction(object, nextAction);
-        return;
-    }
-
-    dialogueText.textContent = lines[index];
-    dialogueChoices.replaceChildren();
-
-    addButton("Continue...", () => {
-        if (index < lines.length - 1) {
-            showSequence(object, lines, index + 1, nextAction);
-        } else {
-            executeAction(object, nextAction);
-        }
-    });
-}
-
 
 function addButton(label, onClick) {
     const button = document.createElement("button");
+
     button.type = "button";
     button.className = "dialogue-choice";
     button.textContent = label;
     button.addEventListener("click", onClick);
+
     dialogueChoices.appendChild(button);
 }
 
 
-// An action is either another block under this object, a scene ID, or "close".
+
 function executeAction(object, action) {
     if (!action) return;
 

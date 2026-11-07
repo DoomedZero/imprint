@@ -21,18 +21,24 @@ export const dialogues = {
 
             choices: [
                 {
-                    label: "Open the door...",
+                    label: [
+                        "Open the door..."
+                    ],
+
+                    response: [],
+
                     action: "archive"
                 },
                 {
                     label: "Extinguish your fire of curiosity with laziness...",
-                    action: "sequence",
-                    lines: [
+
+                    response: [
                         "Nice try, but you can't.",
                         "You are in a special dimension.",
                         "Your choices are already made..."
                     ],
-                    nextAction: "archive"
+
+                    action: "archive"
                 }
             ]
         },
