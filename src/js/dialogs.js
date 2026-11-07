@@ -32,8 +32,6 @@ export const dialogues = {
 
                     response: [
                         "Nice try, but you can't.",
-                        "You are in a special dimension.",
-                        "Your choices are already made..."
                     ],
 
                     action: "archive"
@@ -61,16 +59,28 @@ export const dialogues = {
 
             choices: [
                 {
-                    label: "Open the door(Safe One)",
+                    label: "Push it",
 
-                    response: [],
+                    response: [
+                        "So you choose to push",
+                        "Well tell me if pushing and pulling opens the door",
+                        "Do we really need both options?",
+                        "Maybe yes",
+                        "Maybe YES FOR SURE!!"
+                    ],
 
                     action: "archive"
                 },
                 {
-                    label: "Open the door(Real One)",
+                    label: "Pull it",
 
-                    response: [],
+                    response: [
+                        "So you choose to pull",
+                        "Well tell me if pushing and pulling opens the door",
+                        "Do we really need both options?",
+                        "Maybe yes",
+                        "Maybe YES FOR SURE!!"
+                    ],
 
                     action: "clock"
                 }
@@ -206,7 +216,6 @@ export const dialogues = {
                     response: [
                         "Giving up is a personal choice",
                         "But there are no personal choices here.",
-                        "Your choices are already made...",
                         "If you don't come out of comfort zone you see yourself where you started",
                         "You may have NOT guessed it, but you are going back to the start...",
                         "As per the rules...Obviously"
