@@ -141,14 +141,17 @@ export const dialogues = {
                     action: "lift"
                 },
                 {
-                    label: "Let the pot be in peace",
+                    label: "Ignore it...",
 
                     response: [
-                        "You fell for it again?",
-                        "Pitty.",
-                        "You don't have choices...",
-                        "You may see two paths...",
-                        "But you will never know where you will reach next...",
+                        '"Ignorance is bliss"- You say',
+                        "What a pitty.",
+                        "Maybe Ignoring the truth brings happiness",
+                        "But what does happiness bring?",
+                        "What about curiosity which led you know this?",
+                        "Do you really think we take birth just to die",
+                        "Don't be a sadistic",
+                        "Even after your choices and thought doesn't change ANYTHING..."
                     ],
 
                     action: "lift"
