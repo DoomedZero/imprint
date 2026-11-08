@@ -1,9 +1,9 @@
 
 OMFG WEEK 2 APPRVOED-
 REVIEWER SAID-
-1. detailed README.md for players
-2. faster loading and loading screen
-3. more scenes (3(2) done!- tv, radio and replaced two doors into lift)
+1. detailed README.md for players - Done
+2. faster loading and loading screen - Faster loading done- loading screen- working
+3. more scenes (3(2) done!- tv, radio and replaced two doors into lift)- working
 
 
 //Finalized:
