@@ -31,6 +31,22 @@ was getting messy in the code, so trail and error, and I have my so called - Dia
 2. I assume you have vs code, if not then find a way to open index.html with a server
 3. In VS Code- open folder (and authorize in order to use extentions) and start index.html in live server
 
+## Cheatsheet
+-Basically how this game was intended to play
+1. you read the instruction and hit play (yes it was intened)
+2. You click the door and either of options lead to the archive
+3. you open the archive and select an article and read it
+4. You click pot and either of the options lead to lift
+5. lift will lead to special second visit of main door
+6. either push or pull it leads to clock
+7. clock is a linear story which leads to radio
+8. after you reach radio you are supposed to read at least 5 articles
+9. so the pot will start the final arc of TV
+10. Reaching TV means the end has started, linear story
+11. End screen same as start screen must be visible
+Note- you can take a detour to lift but it is just there.
+    As i have locked the lift to archive...
+
 ## Features
 
 - **Interactive scenes** — Move between interconnected environments without navigating to a separate website page.
