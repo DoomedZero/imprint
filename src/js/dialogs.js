@@ -310,37 +310,19 @@ export const dialogues = {
                 "I am the clock...",
                 "But - WHO ARE YOU?...",
                 "What does individuality mean to you?",
-                "And where is that individuality before birth and after death?"
+                "And where is that individuality before birth and after death?",
+                "Do you have any clue about it?"
             ],
 
-            prompt: "Do you have any clue about it?",
-
-            choices: [
-                {
-                    label: "Yes",
-
-                    action: "commsClock2"
-                },
-
-                {
-                    label: "More than you expect",
-
-                    action: "commsClock2"
-                }
-            ],
+            action: "commsClock2"
         },
 
         commsClock2: {
             title: "??",
 
             intro: [
-                "WAIT! you should think before answering..",
-                "I suggest you should say",
-                "YOU ARE RIGHT... I DON'T KNOW ABOUT ME...",
-                "The Clock-"
+                "The-"
             ],
-
-            prompt: "What would like to do?",
 
             action: "commsClock4"
         },
@@ -349,7 +331,7 @@ export const dialogues = {
             title: "The clock",
 
             intro: [
-                "No need to answer my question, I know it is hard....",
+                "No need to answer my question, I know you can't....",
                 "Anyways, You may wonder what this place is and why are you here",
                 "for that- you should meet THE TV.",
                 "But he is hard to reach, ",
@@ -367,6 +349,41 @@ export const dialogues = {
                     action: "radio"
                 }
             ]
+        }
+    },
+    radio: {
+        firstVisit: {
+            title: "The Radio",
+
+            trigger: {
+                type: "sceneVisit",
+                count: 1
+            },
+
+            intro: [
+                ".... I heard a visitor is coming to meet me",
+                "I am pleased to meet you visitor",
+                "I am the radio.",
+                "and my powers lie in listening",
+                "I was listening your conversation with the clock",
+                "But my hearing abilities are not sharp as they were before",
+                "In my time I used to hear even the smallest frequencies",
+                "But the corrosion does it work very well..(Coughs..",
+                "..Severly)",
+                "Let's be on the topic, You wanted to meet the TV right?",
+                "TV is an old friend of mine",
+                "Just like I hear everything, He has the abilty of information",
+                "He has knowledge about many topics you can have endless conversation with him",
+                'Well "The power of information comes with isolation"- He said, when I saw him for the last time',
+                "You want to meet TV, and I want to meet him too",
+                "I guess it would not be that easy...",
+                "but with the powers I grant you, will let you reach him",
+                "From now on you can hear everyone's words-",
+                "(Coughs)",
+                "You should start the search... (Coughs severly)..."
+            ],
+
+            action: "door"
         }
     }
 };
