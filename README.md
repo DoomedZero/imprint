@@ -7,26 +7,29 @@ You just wanted to learn about the technologies that impacted human evolution, b
 
 ## For Terra Reviewers
 
-- The game is intentionally designed without conventional navigation. Exploration is part of the experience.
-- If you find yourself unable to progress, please restart the game.
+- The game is intentionally designed without conventional navigation. Exploration is the experience.
+- If you find yourself unable to progress, read how to play.
 - This project wasn't originally planned as a game. It evolved into one (read the Philosophy section).
-- The first two hours were spent laying the foundation for the archive and information pages. Those early components weren't discarded; they were transformed. I still use CSS class names I created at the very beginning. ;)
+- This V2 is continued from my week 2 version- 
+- (V1 was approved- Thanks!! and it had some flaws which reviewer asked me solve and I did)
+- (My V1 Netlify deploy was 83MBs and this V2 is 11MBs, so yeah there were some heavy optimization)
+-Initially, I rewrote the JS because it loaded painfully slow and
+was getting messy in the code, so trail and error, and I have my so called - Dialouge Based Game Engine -
+- Next I changed most of V1 dialogues to match the V2 theme.
 
 ## How to play?
 -Just open the demo link
--Initial load may take a while
-(I am sorry for this bad structure, it will be solved)
--It is a maze so... If you feel lost- It is intentional(This is easy mode btw, I have planned normal and hard mode already)
--It is a mystery so... Read dialogues, it may help (actually not, in this version)
--If it doesnt open, Just be there for a while, dont spam refresh.
-(try to load it few times or thing)
--If you are stuck then refresh
+-And you will see a screen explaining how to play this game
+-It is a maze so... If you feel lost- It is intentional
+-READ dialogues, it is the only help, And pay ATTENTION TO CHANGES
+-In cheat code section- there is a guide if you can't figure out
+
 
 ## How to play locally?
 -If deployement is not working, you can always-
 1. Clone repo, zip it, just save it in your computer somehow
 2. I assume you have vs code, if not then find a way to open index.html with a server
-(live server in vs code does the job!!)
+3. In VS Code- open folder (and authorize in order to use extentions) and start index.html in live server
 
 ## Features
 
@@ -42,35 +45,36 @@ You just wanted to learn about the technologies that impacted human evolution, b
 - HTML
 - CSS
 - Vanilla JavaScript
-- Browser audio APIs
 
 The project uses a lightweight, custom-built scene and dialogue system without a frontend framework.
 
 ## How It Works
 
-IMPRINT loads individual HTML scene fragments into a shared application container. JavaScript handles scene transitions, object interactions, dialogue progression, and the rendering of archive information.
+IMPRINT loads individual HTML scene fragments into a shared scene container. JavaScript handles scene transitions, object interactions, dialogue progression, and the rendering of archive information.
 
 The main components include:
 
-- **Scene loader** — Fetches and displays scene HTML without a full-page reload.
-- **Dialogue system** — Manages introductory text, interaction choices, and actions.
-- **Scene state** — Tracks scene visits and previously interacted-with objects during the current session.
-- **Archive renderer** — Displays information and images associated with selected artifacts.
-- **Music controller** — Manages background audio independently of scene changes.
+- **Scene loader** - Fetches and displays scene HTML without a full-page reload.
+- **Scene state** - Tracks scene visits and previously interacted-with objects during the current session.
+- **Dialogue system** - Manages introductory text, interaction choices, actions and
+    It's meta data dictates how game behaves...
+-**Render & Interaction** - handles clicks and rendering of dialogues and info page's info rendering
 
 ## Project Philosophy
 
 IMPRINT wasn't supposed to be a special project. But the real-life circumstances surrounding its creation made it special to me.
 
+It started as a NEWSPAPER PRESS which just published articles on technology 
+but my imagination led it to become a game... and to honor the initial version the acrhive is still preserved...
+
 As I worked on it, it became something different: a minimalist, non-violent thriller with elements of mystery, an odd atmosphere, and perhaps even a nihilistic undertone—(as my friends have labelled it.)
 
-It wasn't all planned from the beginning. The project became what it is through the process of making it.
+It wasn't planned fully from the beginning. The project became what it is through the process of making it.
+But one thing was sure - FORESHADOWING - you can feel it on the first playthrough.
 
 ## Status
 
-IMPRINT is a work in progress. Its scenes, interactions, and exploration mechanics are still being developed.
-
-And the work left to do is massive.
+IMPRINT is a work in progress. Its scenes and exploration mechanics are still being developed.
 
 ---
 
