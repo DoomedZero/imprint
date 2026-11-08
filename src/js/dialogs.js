@@ -295,26 +295,43 @@ export const dialogues = {
             ]
         },
 
+        secondVisit: {
+
+            title: "The lift",
+
+            trigger: {
+                type: "sceneVisit",
+                count: 2
+            },
+
+            intro: [
+                "Helloow, I am the lift,",
+                "I am pleased, that you can hear me...",
+                "But your last ride caused some problems and now you can only go to the archive...",
+            ],
+
+            prompt: "So would you like to go to the archive",
+
+            choices: [
+                {
+                    label: "Press the archive button",
+
+                    action: "archive"
+                },
+            ]
+        },
+
         fallback: {
 
             title: "??",
 
-            prompt: "What would you like to do?",
+            prompt: "Sorry for the inconvenience but you can only go to the archive",
 
             choices: [
                 {
                     label: "Press The Archive button in the lift",
 
-                    response: [],
-
                     action: "archive"
-                },
-                {
-                    label: "Press The Main Door button in the lift...",
-
-                    response: [],
-
-                    action: "door"
                 }
             ]
 
