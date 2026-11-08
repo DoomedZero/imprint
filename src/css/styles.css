@@ -156,7 +156,7 @@ main {
     flex-direction: column;
 }
 
-#welcome-screen div h2 {
+#welcome-screen div h1 {
     margin-bottom: 12px;
 }
 
@@ -169,4 +169,13 @@ main {
     padding: 8px;
     border-radius: 8px;
     margin-top: 12px;
+}
+
+.end-screen {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 12px;
 }

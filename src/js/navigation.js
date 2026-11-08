@@ -9,8 +9,9 @@ const scenes = {
     info: "src/scenes/info.html",
     lift: "src/scenes/lift.html",
     clock: "src/scenes/clock.html",
+    radio: "src/scenes/radio.html",
     tv: "src/scenes/tv.html",
-    radio: "src/scenes/radio.html"
+    end: "src/scenes/end.html"
 };
 
 let currentScene = "";
@@ -21,7 +22,7 @@ export function getCurrentScene() {
 }
 
 export async function loadScene(sceneName) {
-    
+
     if (isLoadingScene) return false;
 
     const path = scenes[sceneName];

@@ -449,13 +449,13 @@ export const dialogues = {
                 "all questions can be answered with this one question-",
                 "tell me whose words described The Door?,",
                 "The Pot and The Lift....",
-                "That was just you....",
+                "That was just you...",
                 "This place is you dream, you are here because you are lucid dreaming",
                 "and in 20 seconds, Mom will wake you up beacuse you have to get ready for the halloween party",
-                "so Happy Halloween........."
+                "Enjoy the party and Happy Halloween..."
             ],
 
-            action: "room"
+            action: "end"
         }
     }
 };
