@@ -1,6 +1,6 @@
 export const infoData = {
     eniac: {
-        image: "src/img/eniac.png",
+        image: "src/img/eniac.webp",
 
         longData: [
             `ENIAC (/ˈɛniæk/; Electronic Numerical Integrator and Computer) was the first programmable, electronic, general-purpose digital computer, completed in 1945. Other computers had some of these features, but ENIAC was the first to have them all. ENIAC was Turing-complete and able to solve "a large class of numerical problems" through reprogramming.`,
@@ -15,7 +15,7 @@ export const infoData = {
         ]
     },
     "vacuum-tubes": {
-        image: "src/img/vacuum-tube.jpeg",
+        image: "src/img/vacuum-tube.png",
 
         longData: [
             `A vacuum tube, vac tube, electron tube, thermionic valve (British usage), or tube (North America) is a device that controls electric current flow in a high vacuum between electrodes to which an electric potential difference has been applied. It takes the form of an evacuated tubular envelope of glass or sometimes metal containing electrodes connected to external connection pins.`,
@@ -26,7 +26,7 @@ export const infoData = {
         ]
     },
     "analytical-engine": {
-        image: "src/img/aenge.png",
+        image: "src/img/aenge.webp",
 
         longData: [
             `The analytical engine was a proposed digital mechanical general-purpose computer designed by the English mathematician and computer pioneer Charles Babbage.It was first described in 1837 as the successor to Babbage's difference engine, which was a design for a simpler mechanical calculator.`,
@@ -37,7 +37,7 @@ export const infoData = {
         ]
     },
     enigma: {
-        image: "src/img/enigma.png",
+        image: "src/img/enigma.webp",
 
         longData: [
             `The Enigma machine is a cipher device developed and used in the early- to mid-20th century to protect commercial, diplomatic, and military communication. It was employed extensively by Nazi Germany during World War II, in all branches of the German military. The Enigma machine was considered so secure that it was used to encipher the most top-secret messages.`,
@@ -50,7 +50,7 @@ export const infoData = {
         ]
     },
     "punch-cards": {
-        image: "src/img/punchcards.png",
+        image: "src/img/punchcards.webp",
 
         longData: [
             `A punched card (also punch card) is a stiff paper-based medium used to store digital information via the presence or absence of holes in predefined positions. Developed over the 19th to 20th centuries, punched cards were widely used for data processing, the control of automated machines, and computing. Early applications included controlling weaving looms and recording census data.`,
@@ -61,7 +61,7 @@ export const infoData = {
         ]
     },
     "mechanical-calculator": {
-        image: "src/img/Addizionatrice_Dalton.png",
+        image: "src/img/Addizionatrice_Dalton.webp",
 
         longData: [
             `A mechanical calculator, or calculating machine, is a mechanical device used to perform the basic operations of arithmetic automatically, or a simulation like an analog computer or a slide rule. Most mechanical calculators were comparable in size to small desktop computers and have been rendered obsolete by the advent of the electronic calculator and the digital computer.`,
