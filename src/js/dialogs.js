@@ -429,8 +429,11 @@ export const dialogues = {
             action: "door"
         }
     },
+
     tv: {
+
         firstVisit: {
+
             title: "The TV",
 
             trigger: {
@@ -440,15 +443,14 @@ export const dialogues = {
 
             intro: [
                 "Welcome visitor.....",
-                "I am the TV and I am here to give you information",
+                "I am the TV and I am here to give you the information",
                 "You may have questions like",
-                "What is this place?, and why you are here?",
+                "What is this place? and why you are here?",
                 "all questions can be answered with this one question-",
-                "tell me whose words described The door?,",
-                "The Pot and The lift",
-                "Yes it is that simple",
+                "tell me whose words described The Door?,",
+                "The Pot and The Lift....",
                 "That was just you....",
-                "DREAMING, this place is you dream, you are here because you are lucid dreaming",
+                "This place is you dream, you are here because you are lucid dreaming",
                 "and in 20 seconds, Mom will wake you up beacuse you have to get ready for the halloween party",
                 "so Happy Halloween........."
             ],
