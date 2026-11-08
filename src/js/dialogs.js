@@ -189,12 +189,12 @@ export const dialogues = {
                 "Well...I am the pot",
                 "I would have suggested to you read the archive",
                 "But do you think that can help you?",
-                "It's your choice...",
-                "and if you wonder how can I put you in front of the lift or the archive",
-                "Well... It's magic, yeah let it be magic for now..."
+                "It's your choice...but-",
+                "if you wonder how can I put you in front of the lift or the archive",
+                "Well... It's magic, yeah, let it be magic for now..."
             ],
 
-            prompt: "So would like to go the archive or the lift?",
+            prompt: "So would like to go, the archive or the lift?",
 
             choices: [
                 {
@@ -223,9 +223,9 @@ export const dialogues = {
                 "So you are determined...",
                 "After being with these archive articals for many years",
                 "I have gained wisom just like the TV",
-                "but the TV's knowledge lies far beyond mine...",
+                "but the TV's wisdom lies far beyond mine...",
                 "I am impressed by your dedication and let me tell you,",
-                "I am the only one who has ability to reach the TV",
+                "I am the only one who has the ability to reach the TV, how? well-",
                 "We both walk on the path of wisdom",
                 "and I think you should meet him...",
                 "Let me do my magic..."
