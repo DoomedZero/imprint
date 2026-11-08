@@ -10,7 +10,6 @@ const scenes = {
     lift: "src/scenes/lift.html",
     clock: "src/scenes/clock.html",
     tv: "src/scenes/tv.html",
-    gramophone: "src/scenes/gramophone.html"
 };
 
 let currentScene = "";
