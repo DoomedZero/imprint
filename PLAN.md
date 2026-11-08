@@ -26,12 +26,7 @@ REVIEWER SAID-
 10. lift scene & dialogues
 11. Clock scene & dialogues
 14. Radio scene & dialogues
+10. TV
 
-//Backyard:
-
-10. TV- Done (make it info center- in progress)
-
-15. Absolute shapes (ON HOLD)
-11. Gramophone- (ON HOLD)
-13. Paintings?? (ON HOLD)
-12. Randomized Destinations... (ON HOLD)
+16. the main room
+17. loading screen
