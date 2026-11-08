@@ -1,3 +1,5 @@
+// Closing the scene doesn't increase sceneVisit- tested
+
 export const dialogues = {
     door: {
 
@@ -28,7 +30,7 @@ export const dialogues = {
                     action: "archive"
                 },
                 {
-                    label: "Extinguish your fire of curiosity with laziness...",
+                    label: "Extinguish the fire of curiosity with laziness...",
 
                     response: [
                         "Nice try, but you can't.",
@@ -87,7 +89,7 @@ export const dialogues = {
 
         thirdVisit: {
 
-            title: "SYSTEM 3",
+            title: "The Door",
 
             trigger: {
                 type: "sceneVisit",
@@ -95,40 +97,31 @@ export const dialogues = {
             },
 
             intro: [
-                "Ohh, so this door is called THE MAIN DOOR",
-                "Well you have got your clues from the clock",
-                "So I have to stay quite for a while...",
-                "and not interfere..."
+                "Looks like you can hear me but it surely took a while...",
+                "As you know, I am the door, I can lead you the archive",
+                "But sometimes some specefic events triger some specefic locations",
+                "Just like you visited the clock and and one who visits the clock has one goal only...",
+                "Find the TV, Right?",
+                "Well I can't help you about that",
+                "Maybe reading in the archive can help just like the clock said...",
             ],
 
-            prompt: "What would you like to do?",
+            prompt: "So would you like to go to the archive?",
 
             choices: [
                 {
-                    label: "Push it",
-
-                    response: [
-                        "So you choose to push",
-                        "Well if pushing and pulling opens the door",
-                        "Do we really need both options?",
-                        "Maybe yes",
-                        "Maybe YES FOR SURE!!"
-                    ],
+                    label: "Yes",
 
                     action: "archive"
                 },
                 {
-                    label: "Pull it",
+                    label: "Extinguish the fire of curiosity with laziness?",
 
                     response: [
-                        "So you choose to pull",
-                        "Well if pulling and pushing opens the door",
-                        "Do we really need both options?",
-                        "Maybe yes",
-                        "Maybe YES FOR SURE!!"
+                        "Nice try, but you can't.",
                     ],
 
-                    action: "clock"
+                    action: "archive"
                 }
             ]
         },
@@ -137,18 +130,16 @@ export const dialogues = {
 
             title: "The Door",
 
-            prompt: "What would you like to do?",
+            prompt: "would you like to go to the archive?",
 
             choices: [
                 {
-                    label: "Open the door...",
-
-                    response: [],
+                    label: "Yes",
 
                     action: "archive"
                 },
                 {
-                    label: "Extinguish your fire of curiosity with laziness...",
+                    label: "Extinguish the fire of curiosity with laziness...",
 
                     response: [
                         "Nice try, but you can't.",
