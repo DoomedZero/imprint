@@ -139,6 +139,47 @@ main {
     width: 200px;
 }
 
-#radio{
+#radio {
     margin-top: 200px;
+}
+
+/* The loading screen */
+
+#intro-screen {
+    position: fixed;
+    inset: 0;
+    background: #000;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    transition: opacity 1s ease;
+}
+
+#intro-screen div{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#play-button {
+    color: white;
+    background: transparent;
+    border: 1px solid white;
+    padding: 12px 32px;
+    cursor: pointer;
+}
+
+#play-button:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+#intro-screen.fade-out {
+    opacity: 0;
+    pointer-events: none;
 }
