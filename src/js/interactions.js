@@ -191,7 +191,10 @@ function executeAction(object, action) {
 
     if (nextBlock) {
         showBlock(getCurrentScene(), object, action, nextBlock);
-    } else {
+    } else if (action == "close") {
+        closeDialogue();
+    }
+    else {
         navigateTo(action);
     }
 }
