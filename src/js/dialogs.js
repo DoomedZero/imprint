@@ -211,8 +211,6 @@ export const dialogues = {
                     label: "Give up...",
 
                     response: [
-                        "Giving up is a personal choice",
-                        "But there are no personal choices here.",
                         "If you don't come out of comfort zone you see yourself where you started",
                         "You may have NOT guessed it, but you are going back to the start...",
                         "As per the rules...Obviously"
@@ -274,14 +272,13 @@ export const dialogues = {
             title: "The Clock",
 
             intro: [
-                "/ Hey visitor",
+                "Hey visitor",
                 "(Ahem)...Oh my throat hurts..",
-                'I am "tick-tock", Dont mistake me for "tik-tok"',
-                "It takes me more time to tick than you guys scroll",
                 "I saw you appear in front of me- and, I just greeted you",
-                "But then quesion arises- WHO ARE YOU?",
-                "And I bet no one can answer if Time itself inntrogates you.",
-                "Just think who you were before you were born and will be afer death?"
+                "I am the clock...",
+                "But then quesion arises- WHO ARE YOU?...",
+                "I bet no one can answer it when you are forced to think...",
+                "...Who you were before you were BORN and will be afer DEATH?"
             ],
 
             prompt: "Do you have any clue about it?",
