@@ -294,21 +294,19 @@ export const dialogues = {
             title: "??",
 
             intro: [
-                "I can say... Just accept your foolishness and say",
+                "...hmm..I think you should say..",
                 "YOU ARE RIGHT... I DON'T KNOW ABOUT ME...",
             ],
 
-            prompt: "What would like to do?- Maybe this time IT IS YOUR CHOICE",
+            prompt: "What would like to do?",
 
             choices: [
                 {
-                    label: "Just accept your foolishness as adviced",
+                    label: "Accept the adviced",
 
                     response: [
                         "I think you should disobeyed the advice",
-                        "...",
-                        "but Now you are in a so called paradox with two choices",
-                        "if you obey, you don't disobey and if you disobey, you obey the advice to disobey",
+                        "Do you think you think you don't have individual choice",
                         "It's like either you find Superdeterminism or it finds YOU",
                         "Your-"
                     ],
@@ -318,14 +316,11 @@ export const dialogues = {
                 },
 
                 {
-                    label: "Don't follow the advice and go on yourself",
+                    label: "Don't accept the advice",
 
                     response: [
-                        "It takes GUTS to disobey",
-                        "I like your courage but let me put you in a paradox of choice",
-                        "I advice you to disobey my advice",
-                        "Don't think hard...",
-                        "if you obey, you don't disobey and if you disobey, you obey the advice to disobey",
+                        "I like your courage but this is a paradox of choice",
+                        "I adviced you to disobey my advice too which was labled as a choice",
                         "It's like either you find Superdeterminism or it finds YOU",
                         "Your-"
                     ],
@@ -338,13 +333,10 @@ export const dialogues = {
         },
 
         commsClock3A: {
-            title: "YOU??",
+            title: "?",
 
             intro: [
-                "/ Wait who are you?",
-                "And why your tone suddenly got changed",
-                "Rambling about philosophies and paradoxes,",
-                "Confusing me... Just who are you?"
+                "Wait who are YOU?",
             ],
 
             action: "commsClock3B"
@@ -364,13 +356,8 @@ export const dialogues = {
             title: "System 3",
 
             intro: [
-                "SYSTEM 1 drives usual daily choices",
-                "SYSTEM 2  is for rational thinking and,",
-                "You might think then Who AM I?...",
-                "Maybe I can say I DON'T KNOW WHO AM I TOO...",
-                "But I Do know who I am...",
                 "Think of me as a stage- The actor changes, teh roles changes, the audience changes",
-                "But the stage doesn't, and why I am CHANGED you say...",
+                "But the stage doesn't",
                 "Seeing the play enogh times, the stage knows which are the critical choices",
                 "Whose results the actors find hard to live with...",
                 "But don't limit my existance in the sacle of a mere stage analogy",
@@ -380,11 +367,9 @@ export const dialogues = {
         },
 
         commsClock3D: {
-            title: "You",
+            title: "?",
 
             intro: [
-                "So I am stuck in a worse place then I imagined...",
-                "and you claim to be familliar or might know something about it",
                 "So-"
             ],
 
@@ -395,23 +380,19 @@ export const dialogues = {
             title: "The clock",
 
             intro: [
-                "No need to answer my question",
-                "I have met many and only some managed to utter a word and got proven wrong instantly",
-                "I liked that you tried...",
+                "No need to answer my question, I know it is hard, but also..",
                 "You may wonder what this place is and why are you here",
-                "I sugget you meeting with my friend TV.",
+                "for that- I sugget you meeting with my friend TV.",
                 "But he is hard to reach, ",
                 "so you will need to meet my another friend The radio before meeting Tv",
-                "Maybe Radio can tell you more...",
-                "But keep one thing in mind don't force anybody about anything here",
-                "Because everyone is not same...",
-                "So lets end the conversation with a clue to reach the raio and the clue is",
+                "Maybe Radio can tell you more... or may help find a way to TV...",
+                "This may help you to find the radio-",
                 "THE ARCHIVE CONTAINS SOME VALUEABLE INFORMATION MAKE SURE YOU READ EVERYTHING",
+                "...",
                 "Your return ticket to the main door is ready- Bye!!"
             ],
 
             action: "door"
         }
-
     }
 };
