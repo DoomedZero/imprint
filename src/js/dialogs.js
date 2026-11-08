@@ -354,8 +354,6 @@ export const dialogues = {
                 "(Ahem)...Oh my throat hurts..",
                 "I am the clock...",
                 "But - WHO ARE YOU?...",
-                "What does individuality mean to you?",
-                "And where is that individuality before birth and after death?",
                 "Do you have any clue about it?"
             ],
 
@@ -366,7 +364,7 @@ export const dialogues = {
             title: "??",
 
             intro: [
-                "The-"
+                "Th-"
             ],
 
             action: "commsClock4"
@@ -429,6 +427,33 @@ export const dialogues = {
             ],
 
             action: "door"
+        }
+    },
+    tv: {
+        firstVisit: {
+            title: "The TV",
+
+            trigger: {
+                type: "sceneVisit",
+                count: 1
+            },
+
+            intro: [
+                "Welcome visitor.....",
+                "I am the TV and I am here to give you information",
+                "You may have questions like",
+                "What is this place?, and why you are here?",
+                "all questions can be answered with this one question-",
+                "tell me whose words described The door?,",
+                "The Pot and The lift",
+                "Yes it is that simple",
+                "That was just you....",
+                "DREAMING, this place is you dream, you are here because you are lucid dreaming",
+                "and in 20 seconds, Mom will wake you up beacuse you have to get ready for the halloween party",
+                "so Happy Halloween........."
+            ],
+
+            action: "room"
         }
     }
 };
