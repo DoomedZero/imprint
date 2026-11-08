@@ -61,26 +61,10 @@ export const dialogues = {
                 {
                     label: "Push it",
 
-                    response: [
-                        "So you choose to push",
-                        "Well if pushing and pulling opens the door",
-                        "Do we really need both options?",
-                        "Maybe yes",
-                        "Maybe YES FOR SURE!!"
-                    ],
-
-                    action: "archive"
+                    action: "clock"
                 },
                 {
                     label: "Pull it",
-
-                    response: [
-                        "So you choose to pull",
-                        "Well if pulling and pushing opens the door",
-                        "Do we really need both options?",
-                        "Maybe yes",
-                        "Maybe YES FOR SURE!!"
-                    ],
 
                     action: "clock"
                 }
@@ -191,30 +175,85 @@ export const dialogues = {
                 }
             ]
         },
-        fallback: {
-            prompt: "What would you like to do?",
+
+        secondVisit: {
+            title: "The Pot",
+
+            trigger: {
+                type: "objectVisit",
+                count: 2
+            },
+
+            intro: [
+                "So you are not deaf anymore...",
+                "Well...I am the pot",
+                "I would have suggested to you read the archive",
+                "But do you think that can help you?",
+                "It's your choice...",
+                "and if you wonder how can I put you in front of the lift or the archive",
+                "Well... It's magic, yeah let it be magic for now..."
+            ],
+
+            prompt: "So would like to go the archive or the lift?",
 
             choices: [
                 {
-                    label: "Inspect the pot yourself...",
+                    label: "The archive",
 
-                    response: [],
-
-                    action: "lift"
+                    action: "archive"
                 },
-                {
-                    label: "Let the pot inspect you...",
 
-                    response: [
-                        "You may have thought you will get another ramble",
-                        "Guess you will not",
-                        "Sometimes things don't go as you wish...",
-                    ],
+                {
+                    label: "The lift",
 
                     action: "lift"
                 }
             ]
-        }
+        },
+
+        sixthVisit: {
+            title: "The Pot",
+
+            trigger: {
+                type: "objectVisit",
+                count: 6
+            },
+
+            intro: [
+                "So you are determined...",
+                "After being with these archive articals for many years",
+                "I have gained wisom just like the TV",
+                "but the TV's knowledge lies far beyond mine...",
+                "I am impressed by your dedication and let me tell you,",
+                "I am the only one who has ability to reach the TV",
+                "We both walk on the path of wisdom",
+                "and I think you should meet him...",
+                "Let me do my magic..."
+            ],
+
+            action: "tv"
+        },
+
+        fallback: {
+
+            title: "The Pot",
+            
+            prompt: "Where would you like to do?",
+
+            choices: [
+                {
+                    label: "The archive",
+
+                    action: "archive"
+                },
+
+                {
+                    label: "The lift",
+
+                    action: "lift"
+                }
+            ]
+        },
     },
 
     lift: {
@@ -242,15 +281,13 @@ export const dialogues = {
 
                     response: [],
 
-                    action: "archive"
+                    action: "door"
                 },
                 {
                     label: "Give up...",
 
                     response: [
-                        "If you don't come out of comfort zone you see yourself where you started",
-                        "You may have NOT guessed it, but you are going back to the start...",
-                        "As per the rules...Obviously"
+                        "If you don't come out of comfort zone you see yourself where you started...",
                     ],
 
                     action: "door"
