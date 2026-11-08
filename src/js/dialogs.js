@@ -50,9 +50,55 @@ export const dialogues = {
 
             intro: [
                 "ATTENTION!!",
-                "This is not your familliar door",
-                "Even though it may seem...",
                 "There is something that seems DIFFERENT..."
+            ],
+
+            prompt: "What would you like to do?",
+
+            choices: [
+                {
+                    label: "Push it",
+
+                    response: [
+                        "So you choose to push",
+                        "Well if pushing and pulling opens the door",
+                        "Do we really need both options?",
+                        "Maybe yes",
+                        "Maybe YES FOR SURE!!"
+                    ],
+
+                    action: "archive"
+                },
+                {
+                    label: "Pull it",
+
+                    response: [
+                        "So you choose to pull",
+                        "Well if pulling and pushing opens the door",
+                        "Do we really need both options?",
+                        "Maybe yes",
+                        "Maybe YES FOR SURE!!"
+                    ],
+
+                    action: "clock"
+                }
+            ]
+        },
+
+        thirdVisit: {
+
+            title: "SYSTEM 3",
+
+            trigger: {
+                type: "sceneVisit",
+                count: 3
+            },
+
+            intro: [
+                "Ohh, so this door is called THE MAIN DOOR",
+                "Well you have got your clues from the clock",
+                "So I have to stay quite for a while...",
+                "and not interfere..."
             ],
 
             prompt: "What would you like to do?",
@@ -89,7 +135,7 @@ export const dialogues = {
 
         fallback: {
 
-            title: "??",
+            title: "The Door",
 
             prompt: "What would you like to do?",
 
@@ -251,7 +297,7 @@ export const dialogues = {
 
         firstVisit: {
 
-            title: "??",
+            title: "The Clock",
 
             trigger: {
                 type: "sceneVisit",
@@ -259,116 +305,42 @@ export const dialogues = {
             },
 
             intro: [
-                "You see a clock",
-                "yet another antique piece",
-                "You wonder..."
-            ],
-
-            action: "commsClock1"
-        },
-
-        commsClock1: {
-
-            title: "The Clock",
-
-            intro: [
                 "Hey visitor",
                 "(Ahem)...Oh my throat hurts..",
-                "I saw you appear in front of me- and, I just greeted you",
                 "I am the clock...",
-                "But then quesion arises- WHO ARE YOU?...",
-                "I bet no one can answer it when you are forced to think...",
-                "...Who you were before you were BORN and will be afer DEATH?"
+                "But - WHO ARE YOU?...",
+                "What does individuality mean to you?",
+                "And where is that individuality before birth and after death?"
             ],
 
             prompt: "Do you have any clue about it?",
 
-            action: "commsClock2"
+            choices: [
+                {
+                    label: "Yes",
 
+                    action: "commsClock2"
+                },
+
+                {
+                    label: "More than you expect",
+
+                    action: "commsClock2"
+                }
+            ],
         },
 
         commsClock2: {
             title: "??",
 
             intro: [
-                "...hmm..I think you should say..",
+                "WAIT! you should think before answering..",
+                "I suggest you should say",
                 "YOU ARE RIGHT... I DON'T KNOW ABOUT ME...",
+                "The Clock-"
             ],
 
             prompt: "What would like to do?",
-
-            choices: [
-                {
-                    label: "Accept the adviced",
-
-                    response: [
-                        "I think you should disobeyed the advice",
-                        "Do you think you think you don't have individual choice",
-                        "It's like either you find Superdeterminism or it finds YOU",
-                        "Your-"
-                    ],
-
-                    action: "commsClock3A"
-
-                },
-
-                {
-                    label: "Don't accept the advice",
-
-                    response: [
-                        "I like your courage but this is a paradox of choice",
-                        "I adviced you to disobey my advice too which was labled as a choice",
-                        "It's like either you find Superdeterminism or it finds YOU",
-                        "Your-"
-                    ],
-
-                    action: "commsClock3A"
-                }
-
-
-            ]
-        },
-
-        commsClock3A: {
-            title: "?",
-
-            intro: [
-                "Wait who are YOU?",
-            ],
-
-            action: "commsClock3B"
-        },
-
-        commsClock3B: {
-            title: "??",
-
-            intro: [
-                "I am...SYSTEM 3"
-            ],
-
-            action: "commsClock3C"
-        },
-
-        commsClock3C: {
-            title: "System 3",
-
-            intro: [
-                "Think of me as a stage- The actor changes, teh roles changes, the audience changes",
-                "But the stage doesn't",
-                "Seeing the play enogh times, the stage knows which are the critical choices",
-                "Whose results the actors find hard to live with...",
-                "But don't limit my existance in the sacle of a mere stage analogy",
-            ],
-
-            action: "commsClock3D"
-        },
-
-        commsClock3D: {
-            title: "?",
-
-            intro: [
-                "So-"
-            ],
 
             action: "commsClock4"
         },
@@ -377,19 +349,24 @@ export const dialogues = {
             title: "The clock",
 
             intro: [
-                "No need to answer my question, I know it is hard, but also..",
-                "You may wonder what this place is and why are you here",
-                "for that- I sugget you meeting with my friend TV.",
+                "No need to answer my question, I know it is hard....",
+                "Anyways, You may wonder what this place is and why are you here",
+                "for that- you should meet THE TV.",
                 "But he is hard to reach, ",
-                "so you will need to meet my another friend The radio before meeting Tv",
-                "Maybe Radio can tell you more... or may help find a way to TV...",
-                "This may help you to find the radio-",
-                "THE ARCHIVE CONTAINS SOME VALUEABLE INFORMATION MAKE SURE YOU READ EVERYTHING",
+                "so you will need to meet The RADIO before meeting TV",
+                "Maybe Radio can help find you to find a way to the TV...",
+                "and I can help you reach the radio, hold a second,",
                 "...",
-                "Your return ticket to the main door is ready- Bye!!"
             ],
 
-            action: "door"
+            prompt: `Yeah it's done! just utter "RADIO", Don't try anyhthing funny, PLEASE...`,
+
+            choices: [
+                {
+                    label: 'Blurt out "RADIO"',
+                    action: "radio"
+                }
+            ]
         }
     }
 };
