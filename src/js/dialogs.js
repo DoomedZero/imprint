@@ -1,5 +1,4 @@
 // Closing the scene doesn't increase sceneVisit- tested
-
 export const dialogues = {
     door: {
 
@@ -14,9 +13,9 @@ export const dialogues = {
 
             intro: [
                 "You see a door,",
-                "You wonder where it may lead.",
+                "You wonder where it might lead.",
                 "The door can't answer, usually...",
-                "...So you have to figure out your self."
+                "...So you have to figure out yourself."
             ],
 
             prompt: "What would you like to do?",
@@ -81,11 +80,11 @@ export const dialogues = {
             },
 
             intro: [
-                "Looks like you can hear me but it surely took a while...",
-                "As you know, I am the door, I can lead you the archive",
-                "But sometimes some specefic events triger some specefic locations",
-                "Just like you visited the clock and and one who visits the clock has one goal only...",
-                "Find the TV, Right?",
+                "Looks like you can hear me, but it surely took a while...",
+                "As you know, I am the door. I can lead you the archive",
+                "But sometimes some specific events trigger some specific locations",
+                "Just like you visited the clock and the one who visits the clock has one goal only...",
+                "Find the TV....",
                 "Well I can't help you about that",
                 "Maybe reading in the archive can help just like the clock said...",
             ],
@@ -119,15 +118,6 @@ export const dialogues = {
             choices: [
                 {
                     label: "Yes",
-
-                    action: "archive"
-                },
-                {
-                    label: "Extinguish the fire of curiosity with laziness...",
-
-                    response: [
-                        "Nice try, but you can't.",
-                    ],
 
                     action: "archive"
                 }
@@ -164,11 +154,11 @@ export const dialogues = {
 
                     response: [
                         '"Ignorance is bliss"-',
-                        "What a pitty.",
+                        "What a pity.",
                         "Maybe Ignoring the truth brings happiness",
                         "But what does happiness bring?",
                         "and What about curiosity which led you know this?",
-                        "Don't ignore atleast in this place..."
+                        "Don't ignore at least in this place..."
                     ],
 
                     action: "lift"
@@ -187,14 +177,14 @@ export const dialogues = {
             intro: [
                 "So you are not deaf anymore...",
                 "Well...I am the pot",
-                "I would have suggested to you read the archive",
+                "I would have suggested you to read the archive",
                 "But do you think that can help you?",
                 "It's your choice...but-",
                 "if you wonder how can I put you in front of the lift or the archive",
                 "Well... It's magic, yeah, let it be magic for now..."
             ],
 
-            prompt: "So would like to go, the archive or the lift?",
+            prompt: "So, would like to go the archive or the lift?",
 
             choices: [
                 {
@@ -221,10 +211,10 @@ export const dialogues = {
 
             intro: [
                 "So you are determined...",
-                "After being with these archive articals for many years",
-                "I have gained wisom just like the TV",
+                "After being with these archive articles for many years",
+                "I have gained wisdom just like the TV",
                 "but the TV's wisdom lies far beyond mine...",
-                "I am impressed by your dedication and let me tell you,",
+                "I am impressed by your dedication but let me tell you,",
                 "I am the only one who has the ability to reach the TV, how? well-",
                 "We both walk on the path of wisdom",
                 "and I think you should meet him...",
@@ -268,7 +258,7 @@ export const dialogues = {
             },
 
             intro: [
-                "Oh! a Ascending Room!,",
+                "Oh an Ascending Room!,",
                 "But with no operator",
                 "Can you use it?"
             ],
@@ -287,7 +277,7 @@ export const dialogues = {
                     label: "Give up...",
 
                     response: [
-                        "If you don't come out of comfort zone you see yourself where you started...",
+                        "If you don't come out of your comfort zone you see yourself where you started...",
                     ],
 
                     action: "door"
@@ -379,12 +369,12 @@ export const dialogues = {
                 "for that- you should meet THE TV.",
                 "But he is hard to reach, ",
                 "so you will need to meet The RADIO before meeting TV",
-                "Maybe Radio can help find you to find a way to the TV...",
-                "and I can help you reach the radio, hold a second,",
+                "Maybe Radio can help you find a way to reach the TV...",
+                "and I can help you reach the radio, Just hold on a second",
                 "...",
             ],
 
-            prompt: `Yeah it's done! just utter "RADIO", Don't try anyhthing funny, PLEASE...`,
+            prompt: `Yeah it's done! just utter "RADIO", Don't try anything funny, PLEASE...`,
 
             choices: [
                 {
@@ -408,14 +398,11 @@ export const dialogues = {
                 "I am pleased to meet you visitor",
                 "I am the radio.",
                 "and my powers lie in listening",
-                "I was listening your conversation with the clock",
+                "I was listening to your conversation with the clock",
                 "But my hearing abilities are not sharp as they were before",
-                "In my time I used to hear even the smallest frequencies",
-                "But the corrosion does it work very well..(Coughs..",
-                "..Severly)",
                 "Let's be on the topic, You wanted to meet the TV right?",
                 "TV is an old friend of mine",
-                "Just like I hear everything, He has the abilty of information",
+                "Just like I hear everything, He has the ability of information",
                 "He has knowledge about many topics you can have endless conversation with him",
                 'Well "The power of information comes with isolation"- He said, when I saw him for the last time',
                 "You want to meet TV, and I want to meet him too",
@@ -423,7 +410,7 @@ export const dialogues = {
                 "but with the powers I grant you, will let you reach him",
                 "From now on you can hear everyone's words-",
                 "(Coughs)",
-                "You should start the search... (Coughs severly)..."
+                "You should start the search... (Coughs severely)..."
             ],
 
             action: "door"
@@ -450,8 +437,8 @@ export const dialogues = {
                 "tell me whose words described The Door?,",
                 "The Pot and The Lift....",
                 "That was just you...",
-                "This place is you dream, you are here because you are lucid dreaming",
-                "and in 20 seconds, Mom will wake you up beacuse you have to get ready for the halloween party",
+                "This place is your dream. you are here because you are lucid dreaming",
+                "and in 20 seconds, Mom will wake you up because you have to get ready for the halloween party",
                 "Enjoy the party and Happy Halloween..."
             ],
 
