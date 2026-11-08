@@ -1,14 +1,4 @@
-
-OMFG WEEK 2 APPRVOED-
-REVIEWER SAID-
-1. detailed README.md for players - Done
-2. faster loading and loading screen - Faster loading done- loading screen- working
-2.5. As now we are making a loading screen i will load every asset before we start the game
-3. more scenes - working 2/3
-
-
-//Finalized:
-(Terra week-2)
+(Terra week-1)
 1. Plain white space and a door
 2. Archive scene
 3. Navigation Pot
@@ -21,12 +11,11 @@ REVIEWER SAID-
 
 (Terra week-2)
 
-13. Counter for scene and object visit in state.js
-12. rewrote game engine based on dialogues
-10. lift scene & dialogues
-11. Clock scene & dialogues
+10. Counter for scene and object visit in state.js
+11. rewrote entire game engine based on dialogues
+12. lift scene & dialogues
+13. Clock scene & dialogues
 14. Radio scene & dialogues
-10. TV
-
-16. the main room
-17. loading screen
+15. TV scene & dialogues
+16. loading screen
+17. The end screen
